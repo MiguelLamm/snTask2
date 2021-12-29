@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="state" table="x_742199_order_s_0_hardware_orders" version="3">
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>state</element>
+            <name>x_742199_order_s_0_hardware_orders</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2021-12-21 16:58:59</sys_created_on>
+            <sys_id>7ab347b52fe04110f8c49dacf699b6cf</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>state</sys_name>
+            <sys_package display_value="Order server Hardware" source="x_742199_order_s_0">1fe312e52f240110f8c49dacf699b61f</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Order server Hardware">1fe312e52f240110f8c49dacf699b61f</sys_scope>
+            <sys_update_name>sys_choice_x_742199_order_s_0_hardware_orders_state</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2021-12-21 16:58:59</sys_updated_on>
+        </sys_choice_set>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>state</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>In progress</label>
+            <language>en</language>
+            <name>x_742199_order_s_0_hardware_orders</name>
+            <sequence>10</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2021-12-21 16:58:59</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>fab347b52fe04110f8c49dacf699b6ce</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2021-12-21 16:58:59</sys_updated_on>
+            <value>in_progress</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>state</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Closed complete</label>
+            <language>en</language>
+            <name>x_742199_order_s_0_hardware_orders</name>
+            <sequence>20</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2021-12-21 16:59:00</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>c3b3cff52fe04110f8c49dacf699b6f7</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2021-12-21 16:59:00</sys_updated_on>
+            <value>closed_complete</value>
+        </sys_choice>
+    </sys_choice>
+</record_update>

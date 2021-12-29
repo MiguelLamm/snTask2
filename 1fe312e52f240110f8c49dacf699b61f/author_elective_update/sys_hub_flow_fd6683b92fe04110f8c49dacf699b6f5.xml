@@ -1,0 +1,1265 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow">
+    <sys_hub_flow action="DELETE">
+        <access>public</access>
+        <acls/>
+        <active>false</active>
+        <annotation/>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <compiler_build>glide-rome-06-23-2021__patch1-hotfix1-09-15-2021_09-16-2021_1434.zip</compiler_build>
+        <copied_from/>
+        <copied_from_name/>
+        <description>Add a new incident with caller, short description and logs the ordered.</description>
+        <internal_name>trigger_new_catalog_item_order</internal_name>
+        <label_cache>[{"name":"65b7ba36-4e71-4952-8b08-0d500502d8bd.__dont_treat_as_error__","label":"3➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"65b7ba36-4e71-4952-8b08-0d500502d8bd.__action_status__","label":"3➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"65b7ba36-4e71-4952-8b08-0d500502d8bd.table_name","label":"3➛Incident Table","reference":"incident","reference_display":"Incident Table","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"65b7ba36-4e71-4952-8b08-0d500502d8bd.record","label":"3➛Incident Record","reference":"incident","reference_display":"Incident Record","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"a5c283a7-982a-4786-8fc8-ac8c39b0e673.Record.number","label":"1➛Incident Record➛Number","reference":"","reference_display":"Number","type":"string","base_type":"string","parent_table_name":"incident","column_name":"number"},{"name":"7f73d470-f6d5-4254-862d-0a359063d79c.__dont_treat_as_error__","label":"3➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"7f73d470-f6d5-4254-862d-0a359063d79c.__action_status__","label":"3➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"Created or Updated_1.current.server.name","label":"Trigger➛Hardware orders Record➛Server➛Name","reference":"","reference_display":"Name","type":"string","base_type":"string","parent_table_name":"cmdb_ci_win_server","column_name":"name"},{"name":"Created or Updated_1.current.hardware_type","label":"Trigger➛Hardware orders Record➛Hardware Type","reference":"","reference_display":"Hardware Type","type":"choice","base_type":"choice","parent_table_name":"x_742199_order_s_0_hardware_orders","column_name":"hardware_type"},{"name":"591bb61c-47dc-49e3-9efc-e20ab68c0064.__dont_treat_as_error__","label":"2➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"591bb61c-47dc-49e3-9efc-e20ab68c0064.__action_status__","label":"2➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"Created or Updated_1.current.requested_by.name","label":"Trigger➛Hardware orders Record➛Requested by➛Name","reference":"","reference_display":"Name","type":"string","base_type":"string","parent_table_name":"sys_user","column_name":"name"},{"name":"a5c283a7-982a-4786-8fc8-ac8c39b0e673.__dont_treat_as_error__","label":"1➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"a5c283a7-982a-4786-8fc8-ac8c39b0e673.__action_status__","label":"1➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"a5c283a7-982a-4786-8fc8-ac8c39b0e673.Table","label":"1➛Incident Table","reference":"incident","reference_display":"Incident Table","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"a5c283a7-982a-4786-8fc8-ac8c39b0e673.Record","label":"1➛Incident Record","reference":"incident","reference_display":"Incident Record","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"Created or Updated_1.current.sys_created_by","label":"Trigger➛Hardware orders Record➛Created by","reference":"","reference_display":"Created by","type":"string","base_type":"string","parent_table_name":"x_742199_order_s_0_hardware_orders","column_name":"sys_created_by"},{"name":"Created or Updated_1.current.requested_by","label":"Trigger➛Hardware orders Record➛Requested by","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"x_742199_order_s_0_hardware_orders","column_name":"requested_by"},{"name":"Created or Updated_1.current.requested_by.first_name","label":"Trigger➛Hardware orders Record➛Requested by➛First name","reference":"","reference_display":"First name","type":"string","base_type":"string","parent_table_name":"sys_user","column_name":"first_name"}]</label_cache>
+        <master_snapshot>0fb88b3d2fe04110f8c49dacf699b6be</master_snapshot>
+        <name>Add new incident and log ordered item</name>
+        <natlang/>
+        <outputs/>
+        <remote_trigger_id>d2c0df352f244110f8c49dacf699b6bd</remote_trigger_id>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <show_draft_actions>false</show_draft_actions>
+        <show_triggered_flows>false</show_triggered_flows>
+        <status>draft</status>
+        <sys_class_name>sys_hub_flow</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-12-21 17:10:40</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>fd6683b92fe04110f8c49dacf699b6f5</sys_id>
+        <sys_mod_count>23</sys_mod_count>
+        <sys_name>Add new incident and log ordered item</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Order server Hardware" source="x_742199_order_s_0">1fe312e52f240110f8c49dacf699b61f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Order server Hardware">1fe312e52f240110f8c49dacf699b61f</sys_scope>
+        <sys_update_name>sys_hub_flow_fd6683b92fe04110f8c49dacf699b6f5</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-12-21 18:15:55</sys_updated_on>
+        <type>flow</type>
+    </sys_hub_flow>
+    <sys_translated_text action="DELETE" query="documentkey=fd6683b92fe04110f8c49dacf699b6f5"/>
+    <sys_variable_value action="DELETE" query="document_key=fd6683b92fe04110f8c49dacf699b6f5"/>
+    <sys_flow_record_trigger action="DELETE">
+        <active>true</active>
+        <condition table="x_742199_order_s_0_hardware_orders">^EQ<item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </condition>
+        <name/>
+        <on_delete>false</on_delete>
+        <on_insert>true</on_insert>
+        <on_update>true</on_update>
+        <run_flow_in>background</run_flow_in>
+        <run_on_extended>false</run_on_extended>
+        <run_when_setting>both</run_when_setting>
+        <run_when_user_list/>
+        <run_when_user_setting>any</run_when_user_setting>
+        <sys_class_name>sys_flow_record_trigger</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-12-21 17:56:01</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>d2c0df352f244110f8c49dacf699b6bd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope display_value="Order server Hardware">1fe312e52f240110f8c49dacf699b61f</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-12-21 17:56:01</sys_updated_on>
+        <table>x_742199_order_s_0_hardware_orders</table>
+    </sys_flow_record_trigger>
+    <sys_trigger_runner_mapping action="DELETE">
+        <active>true</active>
+        <data>{"table":"sys_trigger_runner_mapping","id":"5ec0df352f244110f8c49dacf699b6bd","name":"trigger_runner","type":"java.util.Collections$UnmodifiableMap"}</data>
+        <identifier>fd6683b92fe04110f8c49dacf699b6f5</identifier>
+        <runner>FDTriggerRunner</runner>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-12-21 17:56:01</sys_created_on>
+        <sys_id>5ec0df352f244110f8c49dacf699b6bd</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-12-21 17:56:02</sys_updated_on>
+        <trigger display_value="">d2c0df352f244110f8c49dacf699b6bd</trigger>
+    </sys_trigger_runner_mapping>
+    <sys_json_chunk action="DELETE">
+        <data>H4sIAAAAAAAAAGXLWwqAIBBA0b3MdytwKxGD5fggGUFHLKK99yAo6Pce7ga5MtqYGgYGBaOeZpdTZQPdTc0TYy2UMYYioPrh0wuJBHbXl8T/jpc1r48mRlqE2JA5u9WxEOwH5v2lw4YAAAA=</data>
+        <document_id>5ec0df352f244110f8c49dacf699b6bd</document_id>
+        <field>trigger_runner</field>
+        <length>144</length>
+        <position>0</position>
+        <source_table>sys_trigger_runner_mapping</source_table>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-12-21 17:56:01</sys_created_on>
+        <sys_id>16c0df352f244110f8c49dacf699b6be</sys_id>
+    </sys_json_chunk>
+    <sys_trigger_runner_mapping action="DELETE" query="identifier=fd6683b92fe04110f8c49dacf699b6f5^sys_idNOT IN5ec0df352f244110f8c49dacf699b6bd"/>
+    <sys_hub_trigger_instance action="DELETE" query="flow=fd6683b92fe04110f8c49dacf699b6f5^sys_idNOT INd8b84b3d2fe04110f8c49dacf699b652"/>
+    <sys_hub_trigger_instance action="DELETE">
+        <comment/>
+        <display_text/>
+        <flow display_value="Add new incident and log ordered item">fd6683b92fe04110f8c49dacf699b6f5</flow>
+        <name>Created or Updated</name>
+        <remote_sys_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-12-21 17:20:39</sys_created_on>
+        <sys_id>d8b84b3d2fe04110f8c49dacf699b652</sys_id>
+        <sys_mod_count>20</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-12-21 18:08:10</sys_updated_on>
+        <trigger_definition display_value="Created or Updated">a45d9180c32222002841b63b12d3aea7</trigger_definition>
+        <trigger_inputs/>
+        <trigger_outputs/>
+        <trigger_type>record_create_or_update</trigger_type>
+    </sys_hub_trigger_instance>
+    <sys_variable_value action="DELETE" query="document_key=d8b84b3d2fe04110f8c49dacf699b652"/>
+    <sys_variable_value action="DELETE">
+        <document>sys_hub_trigger_instance</document>
+        <document_key>d8b84b3d2fe04110f8c49dacf699b652</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-12-21 17:20:39</sys_created_on>
+        <sys_id>14b84b3d2fe04110f8c49dacf699b653</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-12-21 17:20:39</sys_updated_on>
+        <value>x_742199_order_s_0_hardware_orders</value>
+        <variable display_value="Table">cf1e1980c32222002841b63b12d3aea0</variable>
+    </sys_variable_value>
+    <sys_variable_value action="DELETE">
+        <document>sys_hub_trigger_instance</document>
+        <document_key>d8b84b3d2fe04110f8c49dacf699b652</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-12-21 17:20:39</sys_created_on>
+        <sys_id>50b84b3d2fe04110f8c49dacf699b653</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-12-21 17:20:39</sys_updated_on>
+        <value>^EQ</value>
+        <variable display_value="Condition">707dd180c32222002841b63b12d3aecb</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="DELETE" query="table=var__m_sys_hub_trigger_output_a45d9180c32222002841b63b12d3aea7^id=d8b84b3d2fe04110f8c49dacf699b652"/>
+    <sys_flow_cat_variable_model action="DELETE" query="id=fd6683b92fe04110f8c49dacf699b6f5^sys_idNOT INb56683b92fe04110f8c49dacf699b6f7"/>
+    <sys_flow_cat_variable_model action="DELETE">
+        <id>fd6683b92fe04110f8c49dacf699b6f5</id>
+        <name>Trigger new Catalog item order</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-12-21 17:10:40</sys_created_on>
+        <sys_id>b56683b92fe04110f8c49dacf699b6f7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-12-21 17:10:40</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_hub_flow_input action="DELETE" query="model=fd6683b92fe04110f8c49dacf699b6f5^sys_idNOT IN40b84b3d2fe04110f8c49dacf699b645,90b84b3d2fe04110f8c49dacf699b64b,ccb84b3d2fe04110f8c49dacf699b63e"/>
+    <sys_hub_flow_input action="DELETE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>child_label=FDChangeDetails,child_name=FDChangeDetails,child_type=object,child_type_label=Object,co_type_name=FD4093dbf5a124411002d968588adfc36e,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,pwd2droppable=true,uiType=array.object,uiTypeLabel=Array.Object</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>changed_fields</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Changed Fields</label>
+        <mandatory>false</mandatory>
+        <max_length>4000</max_length>
+        <model display_value="Add new incident and log ordered item">fd6683b92fe04110f8c49dacf699b6f5</model>
+        <model_id>fd6683b92fe04110f8c49dacf699b6f5</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_fd6683b92fe04110f8c49dacf699b6f5</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-12-21 17:20:39</sys_created_on>
+        <sys_id>40b84b3d2fe04110f8c49dacf699b645</sys_id>
+        <sys_mod_count>19</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Order server Hardware">1fe312e52f240110f8c49dacf699b61f</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-12-21 18:08:10</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_flow_input action="DELETE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name,uiTypeLabel=Table Name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Table Name</label>
+        <mandatory>false</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Add new incident and log ordered item">fd6683b92fe04110f8c49dacf699b6f5</model>
+        <model_id>fd6683b92fe04110f8c49dacf699b6f5</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_fd6683b92fe04110f8c49dacf699b6f5</name>
+        <next_element/>
+        <order>101</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-12-21 17:20:39</sys_created_on>
+        <sys_id>90b84b3d2fe04110f8c49dacf699b64b</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Order server Hardware">1fe312e52f240110f8c49dacf699b61f</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-12-21 18:04:38</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_flow_input action="DELETE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=document_id,uiTypeLabel=Document ID</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent>table_name</dependent>
+        <dependent_on_field>table_name</dependent_on_field>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>current</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">document_id</internal_type>
+        <label>Record</label>
+        <mandatory>true</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Add new incident and log ordered item">fd6683b92fe04110f8c49dacf699b6f5</model>
+        <model_id>fd6683b92fe04110f8c49dacf699b6f5</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_fd6683b92fe04110f8c49dacf699b6f5</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-12-21 17:20:39</sys_created_on>
+        <sys_id>ccb84b3d2fe04110f8c49dacf699b63e</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Order server Hardware">1fe312e52f240110f8c49dacf699b61f</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-12-21 18:04:38</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>true</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_instance action="DELETE" query="flow=fd6683b92fe04110f8c49dacf699b6f5^sys_idNOT IN54b84b3d2fe04110f8c49dacf699b658,98b84b3d2fe04110f8c49dacf699b65d"/>
+    <sys_hub_action_instance action="DELETE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Create Task">2b3a6335531003003bf1d9109ec58759</action_type>
+        <action_type_parent/>
+        <comment/>
+        <compiled_snapshot>2b3a6335531003003bf1d9109ec58759</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Add new incident and log ordered item">fd6683b92fe04110f8c49dacf699b6f5</flow>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-12-21 17:20:40</sys_created_on>
+        <sys_id>54b84b3d2fe04110f8c49dacf699b658</sys_id>
+        <sys_mod_count>48</sys_mod_count>
+        <sys_scope display_value="Order server Hardware">1fe312e52f240110f8c49dacf699b61f</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-12-21 18:08:10</sys_updated_on>
+        <ui_id>a5c283a7-982a-4786-8fc8-ac8c39b0e673</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="DELETE" query="document_key=54b84b3d2fe04110f8c49dacf699b658"/>
+    <sys_variable_value action="DELETE">
+        <document>sys_hub_action_instance</document>
+        <document_key>54b84b3d2fe04110f8c49dacf699b658</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-12-21 17:20:40</sys_created_on>
+        <sys_id>10b84b3d2fe04110f8c49dacf699b65a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-12-21 17:20:40</sys_updated_on>
+        <value>incident</value>
+        <variable display_value="Table">e73a6335531003003bf1d9109ec5875c</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="DELETE" query="id=54b84b3d2fe04110f8c49dacf699b658"/>
+    <sys_element_mapping action="DELETE">
+        <field>field_values</field>
+        <id>54b84b3d2fe04110f8c49dacf699b658</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-12-21 17:20:40</sys_created_on>
+        <sys_id>9cb84b3d2fe04110f8c49dacf699b659</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-12-21 18:04:39</sys_updated_on>
+        <table>var__m_sys_hub_action_input_2b3a6335531003003bf1d9109ec58759</table>
+        <value>caller_id={"display":"System Administrator","value":"6816f79cc0a8016401c5a33be04be441"}^state=2^short_description=Ordered new server hardware^work_notes=User {{Created or Updated_1.current.requested_by.name}} has ordered {{Created or Updated_1.current.hardware_type}} for server: {{Created or Updated_1.current.server.name}}^category=hardware</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="DELETE">
+        <field>task_table</field>
+        <id>54b84b3d2fe04110f8c49dacf699b658</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-12-21 17:20:40</sys_created_on>
+        <sys_id>d8b84b3d2fe04110f8c49dacf699b659</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-12-21 17:20:40</sys_updated_on>
+        <table>var__m_sys_hub_action_input_2b3a6335531003003bf1d9109ec58759</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_action_instance action="DELETE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Log">5bc1bcc6531003003bf1d9109ec587d4</action_type>
+        <action_type_parent/>
+        <comment/>
+        <compiled_snapshot>5bc1bcc6531003003bf1d9109ec587d4</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Add new incident and log ordered item">fd6683b92fe04110f8c49dacf699b6f5</flow>
+        <order>2</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-12-21 17:20:40</sys_created_on>
+        <sys_id>98b84b3d2fe04110f8c49dacf699b65d</sys_id>
+        <sys_mod_count>48</sys_mod_count>
+        <sys_scope display_value="Order server Hardware">1fe312e52f240110f8c49dacf699b61f</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-12-21 18:08:10</sys_updated_on>
+        <ui_id>591bb61c-47dc-49e3-9efc-e20ab68c0064</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="DELETE" query="document_key=98b84b3d2fe04110f8c49dacf699b65d"/>
+    <sys_element_mapping action="DELETE" query="id=98b84b3d2fe04110f8c49dacf699b65d"/>
+    <sys_element_mapping action="DELETE">
+        <field>log_message</field>
+        <id>98b84b3d2fe04110f8c49dacf699b65d</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-12-21 17:20:40</sys_created_on>
+        <sys_id>9cb84b3d2fe04110f8c49dacf699b65e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-12-21 17:20:40</sys_updated_on>
+        <table>var__m_sys_hub_action_input_5bc1bcc6531003003bf1d9109ec587d4</table>
+        <value>User {{Created or Updated_1.current.requested_by.name}} has ordered {{Created or Updated_1.current.hardware_type}} for server: {{Created or Updated_1.current.server.name}}</value>
+    </sys_element_mapping>
+    <sys_documentation action="DELETE" query="name=var__m_sys_hub_flow_input_fd6683b92fe04110f8c49dacf699b6f5^sys_idNOT IN18b84b3d2fe04110f8c49dacf699b64f,1cb84b3d2fe04110f8c49dacf699b649,c8b84b3d2fe04110f8c49dacf699b643"/>
+    <sys_documentation action="DELETE">
+        <element>table_name</element>
+        <help/>
+        <hint/>
+        <label>Table Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_fd6683b92fe04110f8c49dacf699b6f5</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-12-21 17:20:39</sys_created_on>
+        <sys_id>18b84b3d2fe04110f8c49dacf699b64f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Order server Hardware" source="x_742199_order_s_0">1fe312e52f240110f8c49dacf699b61f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Order server Hardware">1fe312e52f240110f8c49dacf699b61f</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-12-21 17:20:39</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="DELETE">
+        <element>changed_fields</element>
+        <help/>
+        <hint/>
+        <label>Changed Fields</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_fd6683b92fe04110f8c49dacf699b6f5</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-12-21 17:20:39</sys_created_on>
+        <sys_id>1cb84b3d2fe04110f8c49dacf699b649</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Order server Hardware" source="x_742199_order_s_0">1fe312e52f240110f8c49dacf699b61f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Order server Hardware">1fe312e52f240110f8c49dacf699b61f</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-12-21 17:20:39</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="DELETE">
+        <element>current</element>
+        <help/>
+        <hint/>
+        <label>Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_fd6683b92fe04110f8c49dacf699b6f5</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-12-21 17:20:39</sys_created_on>
+        <sys_id>c8b84b3d2fe04110f8c49dacf699b643</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Order server Hardware" source="x_742199_order_s_0">1fe312e52f240110f8c49dacf699b61f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Order server Hardware">1fe312e52f240110f8c49dacf699b61f</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-12-21 17:20:39</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_flow_trigger_plan action="DELETE" query="plan_id=fd6683b92fe04110f8c49dacf699b6f5^sys_idNOT INf7b8cb3d2fe04110f8c49dacf699b667"/>
+    <sys_flow_trigger_plan action="DELETE">
+        <binding_strategy>com.snc.process_flow.engine.binding.OncePerRecord</binding_strategy>
+        <plan>{"persistor":{"@class":".ChunkingPlanPersistor","table":"sys_flow_trigger_plan","id":"f7b8cb3d2fe04110f8c49dacf699b667","name":"plan","plan_signature":null}}</plan>
+        <plan_id>fd6683b92fe04110f8c49dacf699b6f5</plan_id>
+        <snapshot>8bf0d3752f244110f8c49dacf699b664</snapshot>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-12-21 17:20:54</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>f7b8cb3d2fe04110f8c49dacf699b667</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-12-21 17:56:02</sys_updated_on>
+        <trigger display_value="">d2c0df352f244110f8c49dacf699b6bd</trigger>
+    </sys_flow_trigger_plan>
+    <sys_hub_flow_snapshot action="DELETE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation/>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description>Add a new incident with caller, short description and logs the ordered.</description>
+        <internal_name>trigger_new_catalog_item_order</internal_name>
+        <label_cache>[{"name":"65b7ba36-4e71-4952-8b08-0d500502d8bd.__dont_treat_as_error__","label":"3➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"65b7ba36-4e71-4952-8b08-0d500502d8bd.__action_status__","label":"3➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"65b7ba36-4e71-4952-8b08-0d500502d8bd.table_name","label":"3➛Incident Table","reference":"incident","reference_display":"Incident","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"65b7ba36-4e71-4952-8b08-0d500502d8bd.record","label":"3➛Incident Record","reference":"incident","reference_display":"Incident","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"a5c283a7-982a-4786-8fc8-ac8c39b0e673.Record.number","label":"1➛Incident Record➛Number","reference":"","reference_display":"Number","type":"string","base_type":"string","parent_table_name":"incident","column_name":"number"},{"name":"7f73d470-f6d5-4254-862d-0a359063d79c.__dont_treat_as_error__","label":"3➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"7f73d470-f6d5-4254-862d-0a359063d79c.__action_status__","label":"3➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"Created or Updated_1.current.server.name","label":"Trigger➛Hardware orders Record➛Server➛Name","reference":"","reference_display":"Name","type":"string","base_type":"string","parent_table_name":"cmdb_ci_win_server","column_name":"name"},{"name":"Created or Updated_1.current.hardware_type","label":"Trigger➛Hardware orders Record➛Hardware Type","reference":"","reference_display":"Hardware Type","type":"choice","base_type":"choice","parent_table_name":"x_742199_order_s_0_hardware_orders","column_name":"hardware_type"},{"name":"591bb61c-47dc-49e3-9efc-e20ab68c0064.__dont_treat_as_error__","label":"2➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"591bb61c-47dc-49e3-9efc-e20ab68c0064.__action_status__","label":"2➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"Created or Updated_1.current.requested_by.name","label":"Trigger➛Hardware orders Record➛Requested by➛Name","reference":"","reference_display":"Name","type":"string","base_type":"string","parent_table_name":"sys_user","column_name":"name"},{"name":"a5c283a7-982a-4786-8fc8-ac8c39b0e673.__dont_treat_as_error__","label":"1➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"a5c283a7-982a-4786-8fc8-ac8c39b0e673.__action_status__","label":"1➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"a5c283a7-982a-4786-8fc8-ac8c39b0e673.Table","label":"1➛Incident Table","reference":"incident","reference_display":"Incident","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"a5c283a7-982a-4786-8fc8-ac8c39b0e673.Record","label":"1➛Incident Record","reference":"incident","reference_display":"Incident","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"Created or Updated_1.current.sys_created_by","label":"Trigger➛Hardware orders Record➛Created by","reference":"","reference_display":"Created by","type":"string","base_type":"string","parent_table_name":"x_742199_order_s_0_hardware_orders","column_name":"sys_created_by"},{"name":"Created or Updated_1.current.requested_by","label":"Trigger➛Hardware orders Record➛Requested by","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"x_742199_order_s_0_hardware_orders","column_name":"requested_by"},{"name":"Created or Updated_1.current.requested_by.first_name","label":"Trigger➛Hardware orders Record➛Requested by➛First name","reference":"","reference_display":"First name","type":"string","base_type":"string","parent_table_name":"sys_user","column_name":"first_name"}]</label_cache>
+        <master>true</master>
+        <name>Add new incident and log ordered item</name>
+        <natlang/>
+        <outputs/>
+        <parent_flow display_value="Add new incident and log ordered item">fd6683b92fe04110f8c49dacf699b6f5</parent_flow>
+        <remote_trigger_id/>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow_snapshot</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-12-21 17:20:51</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>0fb88b3d2fe04110f8c49dacf699b6be</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Order server Hardware">1fe312e52f240110f8c49dacf699b61f</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-12-21 17:55:59</sys_updated_on>
+        <type>flow</type>
+    </sys_hub_flow_snapshot>
+    <sys_translated_text action="DELETE" query="documentkey=0fb88b3d2fe04110f8c49dacf699b6be"/>
+    <sys_variable_value action="DELETE" query="document_key=0fb88b3d2fe04110f8c49dacf699b6be"/>
+    <sys_hub_trigger_instance action="DELETE" query="flow=0fb88b3d2fe04110f8c49dacf699b6be^sys_idNOT INabb8cb3d2fe04110f8c49dacf699b628"/>
+    <sys_hub_trigger_instance action="DELETE">
+        <comment/>
+        <display_text/>
+        <flow display_value="Add new incident and log ordered item">0fb88b3d2fe04110f8c49dacf699b6be</flow>
+        <name>Created or Updated</name>
+        <remote_sys_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-12-21 17:20:53</sys_created_on>
+        <sys_id>abb8cb3d2fe04110f8c49dacf699b628</sys_id>
+        <sys_mod_count>11</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-12-21 17:56:02</sys_updated_on>
+        <trigger_definition display_value="Created or Updated">a45d9180c32222002841b63b12d3aea7</trigger_definition>
+        <trigger_inputs/>
+        <trigger_outputs/>
+        <trigger_type>record_create_or_update</trigger_type>
+    </sys_hub_trigger_instance>
+    <sys_variable_value action="DELETE" query="document_key=abb8cb3d2fe04110f8c49dacf699b628"/>
+    <sys_variable_value action="DELETE">
+        <document>sys_hub_trigger_instance</document>
+        <document_key>abb8cb3d2fe04110f8c49dacf699b628</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-12-21 17:20:53</sys_created_on>
+        <sys_id>a3b8cb3d2fe04110f8c49dacf699b62a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-12-21 17:20:53</sys_updated_on>
+        <value>x_742199_order_s_0_hardware_orders</value>
+        <variable display_value="Table">cf1e1980c32222002841b63b12d3aea0</variable>
+    </sys_variable_value>
+    <sys_variable_value action="DELETE">
+        <document>sys_hub_trigger_instance</document>
+        <document_key>abb8cb3d2fe04110f8c49dacf699b628</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-12-21 17:20:53</sys_created_on>
+        <sys_id>efb8cb3d2fe04110f8c49dacf699b629</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-12-21 17:20:53</sys_updated_on>
+        <value>^EQ</value>
+        <variable display_value="Condition">707dd180c32222002841b63b12d3aecb</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="DELETE" query="table=var__m_sys_hub_trigger_output_a45d9180c32222002841b63b12d3aea7^id=abb8cb3d2fe04110f8c49dacf699b628"/>
+    <sys_flow_cat_variable_model action="DELETE" query="id=0fb88b3d2fe04110f8c49dacf699b6be^sys_idNOT IN4bb88b3d2fe04110f8c49dacf699b6bf"/>
+    <sys_flow_cat_variable_model action="DELETE">
+        <id>0fb88b3d2fe04110f8c49dacf699b6be</id>
+        <name>Trigger new Catalog item order</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-12-21 17:20:51</sys_created_on>
+        <sys_id>4bb88b3d2fe04110f8c49dacf699b6bf</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-12-21 17:20:51</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_hub_flow_input action="DELETE" query="model=0fb88b3d2fe04110f8c49dacf699b6be^sys_idNOT IN0fb88b3d2fe04110f8c49dacf699b6c2,13b88b3d2fe04110f8c49dacf699b6f5,5bb88b3d2fe04110f8c49dacf699b6ff"/>
+    <sys_hub_flow_input action="DELETE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=document_id</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent>table_name</dependent>
+        <dependent_on_field>table_name</dependent_on_field>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>current</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">document_id</internal_type>
+        <label>Record</label>
+        <mandatory>true</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Add new incident and log ordered item">0fb88b3d2fe04110f8c49dacf699b6be</model>
+        <model_id>0fb88b3d2fe04110f8c49dacf699b6be</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_0fb88b3d2fe04110f8c49dacf699b6be</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-12-21 17:20:51</sys_created_on>
+        <sys_id>0fb88b3d2fe04110f8c49dacf699b6c2</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Order server Hardware">1fe312e52f240110f8c49dacf699b61f</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-12-21 17:55:58</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>true</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_flow_input action="DELETE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>child_label=FDChangeDetails,child_name=FDChangeDetails,child_type=object,child_type_label=Object,co_type_name=FDe1c0df35ef244110f9f81d3fe64ca841,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,pwd2droppable=true,uiType=array.object,uiTypeLabel=Array.Object</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>changed_fields</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Changed Fields</label>
+        <mandatory>false</mandatory>
+        <max_length>4000</max_length>
+        <model display_value="Add new incident and log ordered item">0fb88b3d2fe04110f8c49dacf699b6be</model>
+        <model_id>0fb88b3d2fe04110f8c49dacf699b6be</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_0fb88b3d2fe04110f8c49dacf699b6be</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-12-21 17:20:52</sys_created_on>
+        <sys_id>13b88b3d2fe04110f8c49dacf699b6f5</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Order server Hardware">1fe312e52f240110f8c49dacf699b61f</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-12-21 17:55:58</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_flow_input action="DELETE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Table Name</label>
+        <mandatory>false</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Add new incident and log ordered item">0fb88b3d2fe04110f8c49dacf699b6be</model>
+        <model_id>0fb88b3d2fe04110f8c49dacf699b6be</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_0fb88b3d2fe04110f8c49dacf699b6be</name>
+        <next_element/>
+        <order>101</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-12-21 17:20:52</sys_created_on>
+        <sys_id>5bb88b3d2fe04110f8c49dacf699b6ff</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Order server Hardware">1fe312e52f240110f8c49dacf699b61f</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-12-21 17:55:58</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_instance action="DELETE" query="flow=0fb88b3d2fe04110f8c49dacf699b6be^sys_idNOT IN5fb8cb3d2fe04110f8c49dacf699b618,abb8cb3d2fe04110f8c49dacf699b626,dbb8cb3d2fe04110f8c49dacf699b612"/>
+    <sys_hub_action_instance action="DELETE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Log">5bc1bcc6531003003bf1d9109ec587d4</action_type>
+        <action_type_parent display_value="Log">0e0ae8c2531003003bf1d9109ec587c8</action_type_parent>
+        <comment/>
+        <compiled_snapshot>5bc1bcc6531003003bf1d9109ec587d4</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Add new incident and log ordered item">0fb88b3d2fe04110f8c49dacf699b6be</flow>
+        <order>2</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-12-21 17:20:52</sys_created_on>
+        <sys_id>5fb8cb3d2fe04110f8c49dacf699b618</sys_id>
+        <sys_mod_count>14</sys_mod_count>
+        <sys_scope display_value="Order server Hardware">1fe312e52f240110f8c49dacf699b61f</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-12-21 17:55:58</sys_updated_on>
+        <ui_id>591bb61c-47dc-49e3-9efc-e20ab68c0064</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="DELETE" query="document_key=5fb8cb3d2fe04110f8c49dacf699b618"/>
+    <sys_element_mapping action="DELETE" query="id=5fb8cb3d2fe04110f8c49dacf699b618"/>
+    <sys_element_mapping action="DELETE">
+        <field>log_message</field>
+        <id>5fb8cb3d2fe04110f8c49dacf699b618</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-12-21 17:20:52</sys_created_on>
+        <sys_id>1fb8cb3d2fe04110f8c49dacf699b619</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-12-21 17:20:52</sys_updated_on>
+        <table>var__m_sys_hub_action_input_5bc1bcc6531003003bf1d9109ec587d4</table>
+        <value>User {{Created or Updated_1.current.requested_by.name}} has ordered {{Created or Updated_1.current.hardware_type}} for server: {{Created or Updated_1.current.server.name}}</value>
+    </sys_element_mapping>
+    <sys_hub_action_instance action="DELETE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <comment/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Add new incident and log ordered item">0fb88b3d2fe04110f8c49dacf699b6be</flow>
+        <order>3</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-12-21 17:20:53</sys_created_on>
+        <sys_id>abb8cb3d2fe04110f8c49dacf699b626</sys_id>
+        <sys_mod_count>14</sys_mod_count>
+        <sys_scope display_value="Order server Hardware">1fe312e52f240110f8c49dacf699b61f</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-12-21 17:55:59</sys_updated_on>
+        <ui_id>65b7ba36-4e71-4952-8b08-0d500502d8bd</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="DELETE" query="document_key=abb8cb3d2fe04110f8c49dacf699b626"/>
+    <sys_variable_value action="DELETE">
+        <document>sys_hub_action_instance</document>
+        <document_key>abb8cb3d2fe04110f8c49dacf699b626</document_key>
+        <order>50</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-12-21 17:20:53</sys_created_on>
+        <sys_id>a7b8cb3d2fe04110f8c49dacf699b628</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-12-21 17:20:53</sys_updated_on>
+        <value>incident</value>
+        <variable display_value="Table">b5d01916c31332002841b63b12d3aec9</variable>
+    </sys_variable_value>
+    <sys_variable_value action="DELETE">
+        <document>sys_hub_action_instance</document>
+        <document_key>abb8cb3d2fe04110f8c49dacf699b626</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-12-21 17:20:53</sys_created_on>
+        <sys_id>e3b8cb3d2fe04110f8c49dacf699b628</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-12-21 17:41:51</sys_updated_on>
+        <value>state=7^close_code=Solved (Permanently)^close_notes=Closed</value>
+        <variable display_value="Fields">02d01916c31332002841b63b12d3aeee</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="DELETE" query="id=abb8cb3d2fe04110f8c49dacf699b626"/>
+    <sys_element_mapping action="DELETE">
+        <field>record</field>
+        <id>abb8cb3d2fe04110f8c49dacf699b626</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-12-21 17:20:53</sys_created_on>
+        <sys_id>afb8cb3d2fe04110f8c49dacf699b627</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-12-21 17:41:51</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value>{{a5c283a7-982a-4786-8fc8-ac8c39b0e673.Record}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="DELETE">
+        <field>table_name</field>
+        <id>abb8cb3d2fe04110f8c49dacf699b626</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-12-21 17:20:53</sys_created_on>
+        <sys_id>ebb8cb3d2fe04110f8c49dacf699b627</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-12-21 17:20:53</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="DELETE">
+        <field>values</field>
+        <id>abb8cb3d2fe04110f8c49dacf699b626</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-12-21 17:20:53</sys_created_on>
+        <sys_id>63b8cb3d2fe04110f8c49dacf699b628</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-12-21 17:20:53</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_action_instance action="DELETE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Create Task">2b3a6335531003003bf1d9109ec58759</action_type>
+        <action_type_parent display_value="Create Task">3f9b1ff1531003003bf1d9109ec58775</action_type_parent>
+        <comment/>
+        <compiled_snapshot>2b3a6335531003003bf1d9109ec58759</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Add new incident and log ordered item">0fb88b3d2fe04110f8c49dacf699b6be</flow>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-12-21 17:20:52</sys_created_on>
+        <sys_id>dbb8cb3d2fe04110f8c49dacf699b612</sys_id>
+        <sys_mod_count>14</sys_mod_count>
+        <sys_scope display_value="Order server Hardware">1fe312e52f240110f8c49dacf699b61f</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-12-21 17:55:58</sys_updated_on>
+        <ui_id>a5c283a7-982a-4786-8fc8-ac8c39b0e673</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="DELETE" query="document_key=dbb8cb3d2fe04110f8c49dacf699b612"/>
+    <sys_variable_value action="DELETE">
+        <document>sys_hub_action_instance</document>
+        <document_key>dbb8cb3d2fe04110f8c49dacf699b612</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-12-21 17:20:52</sys_created_on>
+        <sys_id>53b8cb3d2fe04110f8c49dacf699b614</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-12-21 17:20:52</sys_updated_on>
+        <value>incident</value>
+        <variable display_value="Table">e73a6335531003003bf1d9109ec5875c</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="DELETE" query="id=dbb8cb3d2fe04110f8c49dacf699b612"/>
+    <sys_element_mapping action="DELETE">
+        <field>field_values</field>
+        <id>dbb8cb3d2fe04110f8c49dacf699b612</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-12-21 17:20:52</sys_created_on>
+        <sys_id>dfb8cb3d2fe04110f8c49dacf699b613</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-12-21 17:55:58</sys_updated_on>
+        <table>var__m_sys_hub_action_input_2b3a6335531003003bf1d9109ec58759</table>
+        <value>caller_id={{Created or Updated_1.current.sys_created_by}}^state=2^short_description=Ordered new server hardware^work_notes=User {{Created or Updated_1.current.requested_by.name}} has ordered {{Created or Updated_1.current.hardware_type}} for server: {{Created or Updated_1.current.server.name}}^category=hardware</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="DELETE">
+        <field>task_table</field>
+        <id>dbb8cb3d2fe04110f8c49dacf699b612</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-12-21 17:20:52</sys_created_on>
+        <sys_id>1fb8cb3d2fe04110f8c49dacf699b613</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-12-21 17:20:52</sys_updated_on>
+        <table>var__m_sys_hub_action_input_2b3a6335531003003bf1d9109ec58759</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_documentation action="DELETE" query="name=var__m_sys_hub_flow_input_0fb88b3d2fe04110f8c49dacf699b6be^sys_idNOT IN13b88b3d2fe04110f8c49dacf699b6f1,5bb88b3d2fe04110f8c49dacf699b6fb,9fb8cb3d2fe04110f8c49dacf699b605"/>
+    <sys_documentation action="DELETE">
+        <element>current</element>
+        <help/>
+        <hint/>
+        <label>Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_0fb88b3d2fe04110f8c49dacf699b6be</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-12-21 17:20:52</sys_created_on>
+        <sys_id>13b88b3d2fe04110f8c49dacf699b6f1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Order server Hardware" source="x_742199_order_s_0">1fe312e52f240110f8c49dacf699b61f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Order server Hardware">1fe312e52f240110f8c49dacf699b61f</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-12-21 17:20:52</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="DELETE">
+        <element>changed_fields</element>
+        <help/>
+        <hint/>
+        <label>Changed Fields</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_0fb88b3d2fe04110f8c49dacf699b6be</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-12-21 17:20:52</sys_created_on>
+        <sys_id>5bb88b3d2fe04110f8c49dacf699b6fb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Order server Hardware" source="x_742199_order_s_0">1fe312e52f240110f8c49dacf699b61f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Order server Hardware">1fe312e52f240110f8c49dacf699b61f</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-12-21 17:20:52</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="DELETE">
+        <element>table_name</element>
+        <help/>
+        <hint/>
+        <label>Table Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_0fb88b3d2fe04110f8c49dacf699b6be</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-12-21 17:20:52</sys_created_on>
+        <sys_id>9fb8cb3d2fe04110f8c49dacf699b605</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Order server Hardware" source="x_742199_order_s_0">1fe312e52f240110f8c49dacf699b61f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Order server Hardware">1fe312e52f240110f8c49dacf699b61f</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-12-21 17:20:52</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_hub_flow action="DELETE">
+        <sys_id>fd6683b92fe04110f8c49dacf699b6f5</sys_id>
+        <latest_snapshot>0fb88b3d2fe04110f8c49dacf699b6be</latest_snapshot>
+    </sys_hub_flow>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Order server Hardware">1fe312e52f240110f8c49dacf699b61f</application>
+        <file_path/>
+        <instance_id>2197ce74dbe6db80439ef70fbf96195e</instance_id>
+        <instance_name>dev60592</instance_name>
+        <name>sys_hub_flow_fd6683b92fe04110f8c49dacf699b6f5</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sys_hub_flow"&gt;&lt;sys_hub_flow action="INSERT_OR_UPDATE"&gt;&lt;access&gt;public&lt;/access&gt;&lt;acls/&gt;&lt;active&gt;false&lt;/active&gt;&lt;annotation/&gt;&lt;callable_by_client_api&gt;false&lt;/callable_by_client_api&gt;&lt;category/&gt;&lt;compiler_build&gt;glide-rome-06-23-2021__patch1-hotfix1-09-15-2021_09-16-2021_1434.zip&lt;/compiler_build&gt;&lt;copied_from/&gt;&lt;copied_from_name/&gt;&lt;description&gt;Add a new incident with caller, short description and logs the ordered.&lt;/description&gt;&lt;internal_name&gt;trigger_new_catalog_item_order&lt;/internal_name&gt;&lt;label_cache&gt;[{"name":"65b7ba36-4e71-4952-8b08-0d500502d8bd.__dont_treat_as_error__","label":"3➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"65b7ba36-4e71-4952-8b08-0d500502d8bd.__action_status__","label":"3➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"65b7ba36-4e71-4952-8b08-0d500502d8bd.table_name","label":"3➛Incident Table","reference":"incident","reference_display":"Incident Table","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"65b7ba36-4e71-4952-8b08-0d500502d8bd.record","label":"3➛Incident Record","reference":"incident","reference_display":"Incident Record","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"a5c283a7-982a-4786-8fc8-ac8c39b0e673.Record.number","label":"1➛Incident Record➛Number","reference":"","reference_display":"Number","type":"string","base_type":"string","parent_table_name":"incident","column_name":"number"},{"name":"7f73d470-f6d5-4254-862d-0a359063d79c.__dont_treat_as_error__","label":"3➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"7f73d470-f6d5-4254-862d-0a359063d79c.__action_status__","label":"3➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"Created or Updated_1.current.server.name","label":"Trigger➛Hardware orders Record➛Server➛Name","reference":"","reference_display":"Name","type":"string","base_type":"string","parent_table_name":"cmdb_ci_win_server","column_name":"name"},{"name":"Created or Updated_1.current.hardware_type","label":"Trigger➛Hardware orders Record➛Hardware Type","reference":"","reference_display":"Hardware Type","type":"choice","base_type":"choice","parent_table_name":"x_742199_order_s_0_hardware_orders","column_name":"hardware_type"},{"name":"591bb61c-47dc-49e3-9efc-e20ab68c0064.__dont_treat_as_error__","label":"2➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"591bb61c-47dc-49e3-9efc-e20ab68c0064.__action_status__","label":"2➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"Created or Updated_1.current.requested_by.name","label":"Trigger➛Hardware orders Record➛Requested by➛Name","reference":"","reference_display":"Name","type":"string","base_type":"string","parent_table_name":"sys_user","column_name":"name"},{"name":"a5c283a7-982a-4786-8fc8-ac8c39b0e673.__dont_treat_as_error__","label":"1➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"a5c283a7-982a-4786-8fc8-ac8c39b0e673.__action_status__","label":"1➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"a5c283a7-982a-4786-8fc8-ac8c39b0e673.Table","label":"1➛Incident Table","reference":"incident","reference_display":"Incident Table","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"a5c283a7-982a-4786-8fc8-ac8c39b0e673.Record","label":"1➛Incident Record","reference":"incident","reference_display":"Incident Record","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"Created or Updated_1.current.sys_created_by","label":"Trigger➛Hardware orders Record➛Created by","reference":"","reference_display":"Created by","type":"string","base_type":"string","parent_table_name":"x_742199_order_s_0_hardware_orders","column_name":"sys_created_by"},{"name":"Created or Updated_1.current.requested_by","label":"Trigger➛Hardware orders Record➛Requested by","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"x_742199_order_s_0_hardware_orders","column_name":"requested_by"},{"name":"Created or Updated_1.current.requested_by.first_name","label":"Trigger➛Hardware orders Record➛Requested by➛First name","reference":"","reference_display":"First name","type":"string","base_type":"string","parent_table_name":"sys_user","column_name":"first_name"}]&lt;/label_cache&gt;&lt;master_snapshot&gt;0fb88b3d2fe04110f8c49dacf699b6be&lt;/master_snapshot&gt;&lt;name&gt;Add new incident and log ordered item&lt;/name&gt;&lt;natlang/&gt;&lt;outputs/&gt;&lt;remote_trigger_id&gt;d2c0df352f244110f8c49dacf699b6bd&lt;/remote_trigger_id&gt;&lt;run_as&gt;user&lt;/run_as&gt;&lt;run_with_roles/&gt;&lt;sc_callable&gt;false&lt;/sc_callable&gt;&lt;show_draft_actions&gt;false&lt;/show_draft_actions&gt;&lt;show_triggered_flows&gt;false&lt;/show_triggered_flows&gt;&lt;status&gt;draft&lt;/status&gt;&lt;sys_class_name&gt;sys_hub_flow&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-12-21 17:10:40&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;fd6683b92fe04110f8c49dacf699b6f5&lt;/sys_id&gt;&lt;sys_mod_count&gt;23&lt;/sys_mod_count&gt;&lt;sys_name&gt;Add new incident and log ordered item&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="Order server Hardware" source="x_742199_order_s_0"&gt;1fe312e52f240110f8c49dacf699b61f&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Order server Hardware"&gt;1fe312e52f240110f8c49dacf699b61f&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_hub_flow_fd6683b92fe04110f8c49dacf699b6f5&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-12-21 18:15:55&lt;/sys_updated_on&gt;&lt;type&gt;flow&lt;/type&gt;&lt;/sys_hub_flow&gt;&lt;sys_translated_text action="delete_multiple" query="documentkey=fd6683b92fe04110f8c49dacf699b6f5"/&gt;&lt;sys_variable_value action="delete_multiple" query="document_key=fd6683b92fe04110f8c49dacf699b6f5"/&gt;&lt;sys_flow_record_trigger action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;condition table="x_742199_order_s_0_hardware_orders"&gt;^EQ&lt;item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/&gt;&lt;/condition&gt;&lt;name/&gt;&lt;on_delete&gt;false&lt;/on_delete&gt;&lt;on_insert&gt;true&lt;/on_insert&gt;&lt;on_update&gt;true&lt;/on_update&gt;&lt;run_flow_in&gt;background&lt;/run_flow_in&gt;&lt;run_on_extended&gt;false&lt;/run_on_extended&gt;&lt;run_when_setting&gt;both&lt;/run_when_setting&gt;&lt;run_when_user_list/&gt;&lt;run_when_user_setting&gt;any&lt;/run_when_user_setting&gt;&lt;sys_class_name&gt;sys_flow_record_trigger&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-12-21 17:56:01&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;d2c0df352f244110f8c49dacf699b6bd&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_overrides/&gt;&lt;sys_scope display_value="Order server Hardware"&gt;1fe312e52f240110f8c49dacf699b61f&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-12-21 17:56:01&lt;/sys_updated_on&gt;&lt;table&gt;x_742199_order_s_0_hardware_orders&lt;/table&gt;&lt;/sys_flow_record_trigger&gt;&lt;sys_trigger_runner_mapping action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;data&gt;{"table":"sys_trigger_runner_mapping","id":"5ec0df352f244110f8c49dacf699b6bd","name":"trigger_runner","type":"java.util.Collections$UnmodifiableMap"}&lt;/data&gt;&lt;identifier&gt;fd6683b92fe04110f8c49dacf699b6f5&lt;/identifier&gt;&lt;runner&gt;FDTriggerRunner&lt;/runner&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-12-21 17:56:01&lt;/sys_created_on&gt;&lt;sys_id&gt;5ec0df352f244110f8c49dacf699b6bd&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-12-21 17:56:02&lt;/sys_updated_on&gt;&lt;trigger display_value=""&gt;d2c0df352f244110f8c49dacf699b6bd&lt;/trigger&gt;&lt;/sys_trigger_runner_mapping&gt;&lt;sys_json_chunk action="INSERT_OR_UPDATE"&gt;&lt;data&gt;H4sIAAAAAAAAAGXLWwqAIBBA0b3MdytwKxGD5fggGUFHLKK99yAo6Pce7ga5MtqYGgYGBaOeZpdTZQPdTc0TYy2UMYYioPrh0wuJBHbXl8T/jpc1r48mRlqE2JA5u9WxEOwH5v2lw4YAAAA=&lt;/data&gt;&lt;document_id&gt;5ec0df352f244110f8c49dacf699b6bd&lt;/document_id&gt;&lt;field&gt;trigger_runner&lt;/field&gt;&lt;length&gt;144&lt;/length&gt;&lt;position&gt;0&lt;/position&gt;&lt;source_table&gt;sys_trigger_runner_mapping&lt;/source_table&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-12-21 17:56:01&lt;/sys_created_on&gt;&lt;sys_id&gt;16c0df352f244110f8c49dacf699b6be&lt;/sys_id&gt;&lt;/sys_json_chunk&gt;&lt;sys_trigger_runner_mapping action="delete_multiple" query="identifier=fd6683b92fe04110f8c49dacf699b6f5^sys_idNOT IN5ec0df352f244110f8c49dacf699b6bd"/&gt;&lt;sys_hub_trigger_instance action="delete_multiple" query="flow=fd6683b92fe04110f8c49dacf699b6f5^sys_idNOT INd8b84b3d2fe04110f8c49dacf699b652"/&gt;&lt;sys_hub_trigger_instance action="INSERT_OR_UPDATE"&gt;&lt;comment/&gt;&lt;display_text/&gt;&lt;flow display_value="Add new incident and log ordered item"&gt;fd6683b92fe04110f8c49dacf699b6f5&lt;/flow&gt;&lt;name&gt;Created or Updated&lt;/name&gt;&lt;remote_sys_id/&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-12-21 17:20:39&lt;/sys_created_on&gt;&lt;sys_id&gt;d8b84b3d2fe04110f8c49dacf699b652&lt;/sys_id&gt;&lt;sys_mod_count&gt;20&lt;/sys_mod_count&gt;&lt;sys_scope/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-12-21 18:08:10&lt;/sys_updated_on&gt;&lt;trigger_definition display_value="Created or Updated"&gt;a45d9180c32222002841b63b12d3aea7&lt;/trigger_definition&gt;&lt;trigger_inputs/&gt;&lt;trigger_outputs/&gt;&lt;trigger_type&gt;record_create_or_update&lt;/trigger_type&gt;&lt;/sys_hub_trigger_instance&gt;&lt;sys_variable_value action="delete_multiple" query="document_key=d8b84b3d2fe04110f8c49dacf699b652"/&gt;&lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;&lt;document&gt;sys_hub_trigger_instance&lt;/document&gt;&lt;document_key&gt;d8b84b3d2fe04110f8c49dacf699b652&lt;/document_key&gt;&lt;order&gt;1&lt;/order&gt;&lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-12-21 17:20:39&lt;/sys_created_on&gt;&lt;sys_id&gt;14b84b3d2fe04110f8c49dacf699b653&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-12-21 17:20:39&lt;/sys_updated_on&gt;&lt;value&gt;x_742199_order_s_0_hardware_orders&lt;/value&gt;&lt;variable display_value="Table"&gt;cf1e1980c32222002841b63b12d3aea0&lt;/variable&gt;&lt;/sys_variable_value&gt;&lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;&lt;document&gt;sys_hub_trigger_instance&lt;/document&gt;&lt;document_key&gt;d8b84b3d2fe04110f8c49dacf699b652&lt;/document_key&gt;&lt;order&gt;100&lt;/order&gt;&lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-12-21 17:20:39&lt;/sys_created_on&gt;&lt;sys_id&gt;50b84b3d2fe04110f8c49dacf699b653&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-12-21 17:20:39&lt;/sys_updated_on&gt;&lt;value&gt;^EQ&lt;/value&gt;&lt;variable display_value="Condition"&gt;707dd180c32222002841b63b12d3aecb&lt;/variable&gt;&lt;/sys_variable_value&gt;&lt;sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_trigger_output_a45d9180c32222002841b63b12d3aea7^id=d8b84b3d2fe04110f8c49dacf699b652"/&gt;&lt;sys_flow_cat_variable_model action="delete_multiple" query="id=fd6683b92fe04110f8c49dacf699b6f5^sys_idNOT INb56683b92fe04110f8c49dacf699b6f7"/&gt;&lt;sys_flow_cat_variable_model action="INSERT_OR_UPDATE"&gt;&lt;id&gt;fd6683b92fe04110f8c49dacf699b6f5&lt;/id&gt;&lt;name&gt;Trigger new Catalog item order&lt;/name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-12-21 17:10:40&lt;/sys_created_on&gt;&lt;sys_id&gt;b56683b92fe04110f8c49dacf699b6f7&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_scope/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-12-21 17:10:40&lt;/sys_updated_on&gt;&lt;/sys_flow_cat_variable_model&gt;&lt;sys_hub_flow_input action="delete_multiple" query="model=fd6683b92fe04110f8c49dacf699b6f5^sys_idNOT IN40b84b3d2fe04110f8c49dacf699b645,90b84b3d2fe04110f8c49dacf699b64b,ccb84b3d2fe04110f8c49dacf699b63e"/&gt;&lt;sys_hub_flow_input action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;array&gt;false&lt;/array&gt;&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;&lt;attributes&gt;child_label=FDChangeDetails,child_name=FDChangeDetails,child_type=object,child_type_label=Object,co_type_name=FD4093dbf5a124411002d968588adfc36e,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,pwd2droppable=true,uiType=array.object,uiTypeLabel=Array.Object&lt;/attributes&gt;&lt;audit&gt;false&lt;/audit&gt;&lt;calculation&gt;&lt;![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]&gt;&lt;/calculation&gt;&lt;choice/&gt;&lt;choice_field/&gt;&lt;choice_table/&gt;&lt;column_label/&gt;&lt;comments/&gt;&lt;create_roles/&gt;&lt;default_value/&gt;&lt;defaultsort/&gt;&lt;delete_roles/&gt;&lt;dependent/&gt;&lt;dependent_on_field/&gt;&lt;display&gt;false&lt;/display&gt;&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;&lt;dynamic_creation_script/&gt;&lt;dynamic_default_value/&gt;&lt;dynamic_ref_qual/&gt;&lt;element&gt;changed_fields&lt;/element&gt;&lt;element_reference&gt;false&lt;/element_reference&gt;&lt;foreign_database/&gt;&lt;function_definition/&gt;&lt;function_field&gt;false&lt;/function_field&gt;&lt;help/&gt;&lt;hint/&gt;&lt;internal_type display_value="String"&gt;string&lt;/internal_type&gt;&lt;label&gt;Changed Fields&lt;/label&gt;&lt;mandatory&gt;false&lt;/mandatory&gt;&lt;max_length&gt;4000&lt;/max_length&gt;&lt;model display_value="Add new incident and log ordered item"&gt;fd6683b92fe04110f8c49dacf699b6f5&lt;/model&gt;&lt;model_id&gt;fd6683b92fe04110f8c49dacf699b6f5&lt;/model_id&gt;&lt;model_table&gt;sys_hub_flow&lt;/model_table&gt;&lt;name&gt;var__m_sys_hub_flow_input_fd6683b92fe04110f8c49dacf699b6f5&lt;/name&gt;&lt;next_element/&gt;&lt;order&gt;100&lt;/order&gt;&lt;primary&gt;false&lt;/primary&gt;&lt;read_only&gt;false&lt;/read_only&gt;&lt;read_roles/&gt;&lt;reference/&gt;&lt;reference_cascade_rule/&gt;&lt;reference_floats&gt;false&lt;/reference_floats&gt;&lt;reference_key/&gt;&lt;reference_qual/&gt;&lt;reference_qual_condition/&gt;&lt;reference_type/&gt;&lt;sizeclass/&gt;&lt;spell_check&gt;false&lt;/spell_check&gt;&lt;staged&gt;false&lt;/staged&gt;&lt;sys_class_name&gt;sys_hub_flow_input&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-12-21 17:20:39&lt;/sys_created_on&gt;&lt;sys_id&gt;40b84b3d2fe04110f8c49dacf699b645&lt;/sys_id&gt;&lt;sys_mod_count&gt;19&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package/&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Order server Hardware"&gt;1fe312e52f240110f8c49dacf699b61f&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-12-21 18:08:10&lt;/sys_updated_on&gt;&lt;table_reference&gt;false&lt;/table_reference&gt;&lt;text_index&gt;false&lt;/text_index&gt;&lt;unique&gt;false&lt;/unique&gt;&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;&lt;virtual&gt;false&lt;/virtual&gt;&lt;widget/&gt;&lt;write_roles/&gt;&lt;xml_view&gt;false&lt;/xml_view&gt;&lt;/sys_hub_flow_input&gt;&lt;sys_hub_flow_input action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;array&gt;false&lt;/array&gt;&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;&lt;attributes&gt;element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name,uiTypeLabel=Table Name&lt;/attributes&gt;&lt;audit&gt;false&lt;/audit&gt;&lt;calculation&gt;&lt;![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]&gt;&lt;/calculation&gt;&lt;choice/&gt;&lt;choice_field/&gt;&lt;choice_table/&gt;&lt;column_label/&gt;&lt;comments/&gt;&lt;create_roles/&gt;&lt;default_value/&gt;&lt;defaultsort/&gt;&lt;delete_roles/&gt;&lt;dependent/&gt;&lt;dependent_on_field/&gt;&lt;display&gt;false&lt;/display&gt;&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;&lt;dynamic_creation_script/&gt;&lt;dynamic_default_value/&gt;&lt;dynamic_ref_qual/&gt;&lt;element&gt;table_name&lt;/element&gt;&lt;element_reference&gt;false&lt;/element_reference&gt;&lt;foreign_database/&gt;&lt;function_definition/&gt;&lt;function_field&gt;false&lt;/function_field&gt;&lt;help/&gt;&lt;hint/&gt;&lt;internal_type display_value=""&gt;table_name&lt;/internal_type&gt;&lt;label&gt;Table Name&lt;/label&gt;&lt;mandatory&gt;false&lt;/mandatory&gt;&lt;max_length&gt;200&lt;/max_length&gt;&lt;model display_value="Add new incident and log ordered item"&gt;fd6683b92fe04110f8c49dacf699b6f5&lt;/model&gt;&lt;model_id&gt;fd6683b92fe04110f8c49dacf699b6f5&lt;/model_id&gt;&lt;model_table&gt;sys_hub_flow&lt;/model_table&gt;&lt;name&gt;var__m_sys_hub_flow_input_fd6683b92fe04110f8c49dacf699b6f5&lt;/name&gt;&lt;next_element/&gt;&lt;order&gt;101&lt;/order&gt;&lt;primary&gt;false&lt;/primary&gt;&lt;read_only&gt;false&lt;/read_only&gt;&lt;read_roles/&gt;&lt;reference/&gt;&lt;reference_cascade_rule/&gt;&lt;reference_floats&gt;false&lt;/reference_floats&gt;&lt;reference_key/&gt;&lt;reference_qual/&gt;&lt;reference_qual_condition/&gt;&lt;reference_type/&gt;&lt;sizeclass/&gt;&lt;spell_check&gt;false&lt;/spell_check&gt;&lt;staged&gt;false&lt;/staged&gt;&lt;sys_class_name&gt;sys_hub_flow_input&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-12-21 17:20:39&lt;/sys_created_on&gt;&lt;sys_id&gt;90b84b3d2fe04110f8c49dacf699b64b&lt;/sys_id&gt;&lt;sys_mod_count&gt;8&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package/&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Order server Hardware"&gt;1fe312e52f240110f8c49dacf699b61f&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-12-21 18:04:38&lt;/sys_updated_on&gt;&lt;table_reference&gt;false&lt;/table_reference&gt;&lt;text_index&gt;false&lt;/text_index&gt;&lt;unique&gt;false&lt;/unique&gt;&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;&lt;virtual&gt;false&lt;/virtual&gt;&lt;widget/&gt;&lt;write_roles/&gt;&lt;xml_view&gt;false&lt;/xml_view&gt;&lt;/sys_hub_flow_input&gt;&lt;sys_hub_flow_input action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;array&gt;false&lt;/array&gt;&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;&lt;attributes&gt;element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=document_id,uiTypeLabel=Document ID&lt;/attributes&gt;&lt;audit&gt;false&lt;/audit&gt;&lt;calculation&gt;&lt;![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]&gt;&lt;/calculation&gt;&lt;choice/&gt;&lt;choice_field/&gt;&lt;choice_table/&gt;&lt;column_label/&gt;&lt;comments/&gt;&lt;create_roles/&gt;&lt;default_value/&gt;&lt;defaultsort/&gt;&lt;delete_roles/&gt;&lt;dependent&gt;table_name&lt;/dependent&gt;&lt;dependent_on_field&gt;table_name&lt;/dependent_on_field&gt;&lt;display&gt;false&lt;/display&gt;&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;&lt;dynamic_creation_script/&gt;&lt;dynamic_default_value/&gt;&lt;dynamic_ref_qual/&gt;&lt;element&gt;current&lt;/element&gt;&lt;element_reference&gt;false&lt;/element_reference&gt;&lt;foreign_database/&gt;&lt;function_definition/&gt;&lt;function_field&gt;false&lt;/function_field&gt;&lt;help/&gt;&lt;hint/&gt;&lt;internal_type display_value=""&gt;document_id&lt;/internal_type&gt;&lt;label&gt;Record&lt;/label&gt;&lt;mandatory&gt;true&lt;/mandatory&gt;&lt;max_length&gt;200&lt;/max_length&gt;&lt;model display_value="Add new incident and log ordered item"&gt;fd6683b92fe04110f8c49dacf699b6f5&lt;/model&gt;&lt;model_id&gt;fd6683b92fe04110f8c49dacf699b6f5&lt;/model_id&gt;&lt;model_table&gt;sys_hub_flow&lt;/model_table&gt;&lt;name&gt;var__m_sys_hub_flow_input_fd6683b92fe04110f8c49dacf699b6f5&lt;/name&gt;&lt;next_element/&gt;&lt;order&gt;100&lt;/order&gt;&lt;primary&gt;false&lt;/primary&gt;&lt;read_only&gt;false&lt;/read_only&gt;&lt;read_roles/&gt;&lt;reference/&gt;&lt;reference_cascade_rule/&gt;&lt;reference_floats&gt;false&lt;/reference_floats&gt;&lt;reference_key/&gt;&lt;reference_qual/&gt;&lt;reference_qual_condition/&gt;&lt;reference_type/&gt;&lt;sizeclass/&gt;&lt;spell_check&gt;false&lt;/spell_check&gt;&lt;staged&gt;false&lt;/staged&gt;&lt;sys_class_name&gt;sys_hub_flow_input&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-12-21 17:20:39&lt;/sys_created_on&gt;&lt;sys_id&gt;ccb84b3d2fe04110f8c49dacf699b63e&lt;/sys_id&gt;&lt;sys_mod_count&gt;8&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package/&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Order server Hardware"&gt;1fe312e52f240110f8c49dacf699b61f&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-12-21 18:04:38&lt;/sys_updated_on&gt;&lt;table_reference&gt;false&lt;/table_reference&gt;&lt;text_index&gt;false&lt;/text_index&gt;&lt;unique&gt;false&lt;/unique&gt;&lt;use_dependent_field&gt;true&lt;/use_dependent_field&gt;&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;&lt;virtual&gt;false&lt;/virtual&gt;&lt;widget/&gt;&lt;write_roles/&gt;&lt;xml_view&gt;false&lt;/xml_view&gt;&lt;/sys_hub_flow_input&gt;&lt;sys_hub_action_instance action="delete_multiple" query="flow=fd6683b92fe04110f8c49dacf699b6f5^sys_idNOT IN54b84b3d2fe04110f8c49dacf699b658,98b84b3d2fe04110f8c49dacf699b65d"/&gt;&lt;sys_hub_action_instance action="INSERT_OR_UPDATE"&gt;&lt;action_inputs/&gt;&lt;action_inputs/&gt;&lt;action_type display_value="Create Task"&gt;2b3a6335531003003bf1d9109ec58759&lt;/action_type&gt;&lt;action_type_parent/&gt;&lt;comment/&gt;&lt;compiled_snapshot&gt;2b3a6335531003003bf1d9109ec58759&lt;/compiled_snapshot&gt;&lt;display_text/&gt;&lt;flow display_value="Add new incident and log ordered item"&gt;fd6683b92fe04110f8c49dacf699b6f5&lt;/flow&gt;&lt;order&gt;1&lt;/order&gt;&lt;parent_ui_id/&gt;&lt;sys_class_name&gt;sys_hub_action_instance&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-12-21 17:20:40&lt;/sys_created_on&gt;&lt;sys_id&gt;54b84b3d2fe04110f8c49dacf699b658&lt;/sys_id&gt;&lt;sys_mod_count&gt;48&lt;/sys_mod_count&gt;&lt;sys_scope display_value="Order server Hardware"&gt;1fe312e52f240110f8c49dacf699b61f&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-12-21 18:08:10&lt;/sys_updated_on&gt;&lt;ui_id&gt;a5c283a7-982a-4786-8fc8-ac8c39b0e673&lt;/ui_id&gt;&lt;/sys_hub_action_instance&gt;&lt;sys_variable_value action="delete_multiple" query="document_key=54b84b3d2fe04110f8c49dacf699b658"/&gt;&lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;&lt;document&gt;sys_hub_action_instance&lt;/document&gt;&lt;document_key&gt;54b84b3d2fe04110f8c49dacf699b658&lt;/document_key&gt;&lt;order&gt;0&lt;/order&gt;&lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-12-21 17:20:40&lt;/sys_created_on&gt;&lt;sys_id&gt;10b84b3d2fe04110f8c49dacf699b65a&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-12-21 17:20:40&lt;/sys_updated_on&gt;&lt;value&gt;incident&lt;/value&gt;&lt;variable display_value="Table"&gt;e73a6335531003003bf1d9109ec5875c&lt;/variable&gt;&lt;/sys_variable_value&gt;&lt;sys_element_mapping action="delete_multiple" query="id=54b84b3d2fe04110f8c49dacf699b658"/&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;field_values&lt;/field&gt;&lt;id&gt;54b84b3d2fe04110f8c49dacf699b658&lt;/id&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-12-21 17:20:40&lt;/sys_created_on&gt;&lt;sys_id&gt;9cb84b3d2fe04110f8c49dacf699b659&lt;/sys_id&gt;&lt;sys_mod_count&gt;7&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-12-21 18:04:39&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_action_input_2b3a6335531003003bf1d9109ec58759&lt;/table&gt;&lt;value&gt;caller_id={"display":"System Administrator","value":"6816f79cc0a8016401c5a33be04be441"}^state=2^short_description=Ordered new server hardware^work_notes=User {{Created or Updated_1.current.requested_by.name}} has ordered {{Created or Updated_1.current.hardware_type}} for server: {{Created or Updated_1.current.server.name}}^category=hardware&lt;/value&gt;&lt;/sys_element_mapping&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;task_table&lt;/field&gt;&lt;id&gt;54b84b3d2fe04110f8c49dacf699b658&lt;/id&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-12-21 17:20:40&lt;/sys_created_on&gt;&lt;sys_id&gt;d8b84b3d2fe04110f8c49dacf699b659&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-12-21 17:20:40&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_action_input_2b3a6335531003003bf1d9109ec58759&lt;/table&gt;&lt;value/&gt;&lt;/sys_element_mapping&gt;&lt;sys_hub_action_instance action="INSERT_OR_UPDATE"&gt;&lt;action_inputs/&gt;&lt;action_inputs/&gt;&lt;action_type display_value="Log"&gt;5bc1bcc6531003003bf1d9109ec587d4&lt;/action_type&gt;&lt;action_type_parent/&gt;&lt;comment/&gt;&lt;compiled_snapshot&gt;5bc1bcc6531003003bf1d9109ec587d4&lt;/compiled_snapshot&gt;&lt;display_text/&gt;&lt;flow display_value="Add new incident and log ordered item"&gt;fd6683b92fe04110f8c49dacf699b6f5&lt;/flow&gt;&lt;order&gt;2&lt;/order&gt;&lt;parent_ui_id/&gt;&lt;sys_class_name&gt;sys_hub_action_instance&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-12-21 17:20:40&lt;/sys_created_on&gt;&lt;sys_id&gt;98b84b3d2fe04110f8c49dacf699b65d&lt;/sys_id&gt;&lt;sys_mod_count&gt;48&lt;/sys_mod_count&gt;&lt;sys_scope display_value="Order server Hardware"&gt;1fe312e52f240110f8c49dacf699b61f&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-12-21 18:08:10&lt;/sys_updated_on&gt;&lt;ui_id&gt;591bb61c-47dc-49e3-9efc-e20ab68c0064&lt;/ui_id&gt;&lt;/sys_hub_action_instance&gt;&lt;sys_variable_value action="delete_multiple" query="document_key=98b84b3d2fe04110f8c49dacf699b65d"/&gt;&lt;sys_element_mapping action="delete_multiple" query="id=98b84b3d2fe04110f8c49dacf699b65d"/&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;log_message&lt;/field&gt;&lt;id&gt;98b84b3d2fe04110f8c49dacf699b65d&lt;/id&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-12-21 17:20:40&lt;/sys_created_on&gt;&lt;sys_id&gt;9cb84b3d2fe04110f8c49dacf699b65e&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-12-21 17:20:40&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_action_input_5bc1bcc6531003003bf1d9109ec587d4&lt;/table&gt;&lt;value&gt;User {{Created or Updated_1.current.requested_by.name}} has ordered {{Created or Updated_1.current.hardware_type}} for server: {{Created or Updated_1.current.server.name}}&lt;/value&gt;&lt;/sys_element_mapping&gt;&lt;sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_input_fd6683b92fe04110f8c49dacf699b6f5^sys_idNOT IN18b84b3d2fe04110f8c49dacf699b64f,1cb84b3d2fe04110f8c49dacf699b649,c8b84b3d2fe04110f8c49dacf699b643"/&gt;&lt;sys_documentation action="INSERT_OR_UPDATE"&gt;&lt;element&gt;table_name&lt;/element&gt;&lt;help/&gt;&lt;hint/&gt;&lt;label&gt;Table Name&lt;/label&gt;&lt;language&gt;en&lt;/language&gt;&lt;name&gt;var__m_sys_hub_flow_input_fd6683b92fe04110f8c49dacf699b6f5&lt;/name&gt;&lt;plural/&gt;&lt;sys_class_name&gt;sys_documentation&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-12-21 17:20:39&lt;/sys_created_on&gt;&lt;sys_id&gt;18b84b3d2fe04110f8c49dacf699b64f&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package display_value="Order server Hardware" source="x_742199_order_s_0"&gt;1fe312e52f240110f8c49dacf699b61f&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Order server Hardware"&gt;1fe312e52f240110f8c49dacf699b61f&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-12-21 17:20:39&lt;/sys_updated_on&gt;&lt;url/&gt;&lt;url_target/&gt;&lt;/sys_documentation&gt;&lt;sys_documentation action="INSERT_OR_UPDATE"&gt;&lt;element&gt;changed_fields&lt;/element&gt;&lt;help/&gt;&lt;hint/&gt;&lt;label&gt;Changed Fields&lt;/label&gt;&lt;language&gt;en&lt;/language&gt;&lt;name&gt;var__m_sys_hub_flow_input_fd6683b92fe04110f8c49dacf699b6f5&lt;/name&gt;&lt;plural/&gt;&lt;sys_class_name&gt;sys_documentation&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-12-21 17:20:39&lt;/sys_created_on&gt;&lt;sys_id&gt;1cb84b3d2fe04110f8c49dacf699b649&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package display_value="Order server Hardware" source="x_742199_order_s_0"&gt;1fe312e52f240110f8c49dacf699b61f&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Order server Hardware"&gt;1fe312e52f240110f8c49dacf699b61f&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-12-21 17:20:39&lt;/sys_updated_on&gt;&lt;url/&gt;&lt;url_target/&gt;&lt;/sys_documentation&gt;&lt;sys_documentation action="INSERT_OR_UPDATE"&gt;&lt;element&gt;current&lt;/element&gt;&lt;help/&gt;&lt;hint/&gt;&lt;label&gt;Record&lt;/label&gt;&lt;language&gt;en&lt;/language&gt;&lt;name&gt;var__m_sys_hub_flow_input_fd6683b92fe04110f8c49dacf699b6f5&lt;/name&gt;&lt;plural/&gt;&lt;sys_class_name&gt;sys_documentation&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-12-21 17:20:39&lt;/sys_created_on&gt;&lt;sys_id&gt;c8b84b3d2fe04110f8c49dacf699b643&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package display_value="Order server Hardware" source="x_742199_order_s_0"&gt;1fe312e52f240110f8c49dacf699b61f&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Order server Hardware"&gt;1fe312e52f240110f8c49dacf699b61f&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-12-21 17:20:39&lt;/sys_updated_on&gt;&lt;url/&gt;&lt;url_target/&gt;&lt;/sys_documentation&gt;&lt;sys_flow_trigger_plan action="delete_multiple" query="plan_id=fd6683b92fe04110f8c49dacf699b6f5^sys_idNOT INf7b8cb3d2fe04110f8c49dacf699b667"/&gt;&lt;sys_flow_trigger_plan action="INSERT_OR_UPDATE"&gt;&lt;binding_strategy&gt;com.snc.process_flow.engine.binding.OncePerRecord&lt;/binding_strategy&gt;&lt;plan&gt;{"persistor":{"@class":".ChunkingPlanPersistor","table":"sys_flow_trigger_plan","id":"f7b8cb3d2fe04110f8c49dacf699b667","name":"plan","plan_signature":null}}&lt;/plan&gt;&lt;plan_id&gt;fd6683b92fe04110f8c49dacf699b6f5&lt;/plan_id&gt;&lt;snapshot&gt;8bf0d3752f244110f8c49dacf699b664&lt;/snapshot&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-12-21 17:20:54&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;f7b8cb3d2fe04110f8c49dacf699b667&lt;/sys_id&gt;&lt;sys_mod_count&gt;3&lt;/sys_mod_count&gt;&lt;sys_overrides/&gt;&lt;sys_scope/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-12-21 17:56:02&lt;/sys_updated_on&gt;&lt;trigger display_value=""&gt;d2c0df352f244110f8c49dacf699b6bd&lt;/trigger&gt;&lt;/sys_flow_trigger_plan&gt;&lt;sys_hub_flow_snapshot action="INSERT_OR_UPDATE"&gt;&lt;access&gt;public&lt;/access&gt;&lt;acls/&gt;&lt;active&gt;true&lt;/active&gt;&lt;annotation/&gt;&lt;callable_by_client_api&gt;false&lt;/callable_by_client_api&gt;&lt;category/&gt;&lt;copied_from/&gt;&lt;copied_from_name/&gt;&lt;description&gt;Add a new incident with caller, short description and logs the ordered.&lt;/description&gt;&lt;internal_name&gt;trigger_new_catalog_item_order&lt;/internal_name&gt;&lt;label_cache&gt;[{"name":"65b7ba36-4e71-4952-8b08-0d500502d8bd.__dont_treat_as_error__","label":"3➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"65b7ba36-4e71-4952-8b08-0d500502d8bd.__action_status__","label":"3➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"65b7ba36-4e71-4952-8b08-0d500502d8bd.table_name","label":"3➛Incident Table","reference":"incident","reference_display":"Incident","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"65b7ba36-4e71-4952-8b08-0d500502d8bd.record","label":"3➛Incident Record","reference":"incident","reference_display":"Incident","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"a5c283a7-982a-4786-8fc8-ac8c39b0e673.Record.number","label":"1➛Incident Record➛Number","reference":"","reference_display":"Number","type":"string","base_type":"string","parent_table_name":"incident","column_name":"number"},{"name":"7f73d470-f6d5-4254-862d-0a359063d79c.__dont_treat_as_error__","label":"3➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"7f73d470-f6d5-4254-862d-0a359063d79c.__action_status__","label":"3➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"Created or Updated_1.current.server.name","label":"Trigger➛Hardware orders Record➛Server➛Name","reference":"","reference_display":"Name","type":"string","base_type":"string","parent_table_name":"cmdb_ci_win_server","column_name":"name"},{"name":"Created or Updated_1.current.hardware_type","label":"Trigger➛Hardware orders Record➛Hardware Type","reference":"","reference_display":"Hardware Type","type":"choice","base_type":"choice","parent_table_name":"x_742199_order_s_0_hardware_orders","column_name":"hardware_type"},{"name":"591bb61c-47dc-49e3-9efc-e20ab68c0064.__dont_treat_as_error__","label":"2➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"591bb61c-47dc-49e3-9efc-e20ab68c0064.__action_status__","label":"2➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"Created or Updated_1.current.requested_by.name","label":"Trigger➛Hardware orders Record➛Requested by➛Name","reference":"","reference_display":"Name","type":"string","base_type":"string","parent_table_name":"sys_user","column_name":"name"},{"name":"a5c283a7-982a-4786-8fc8-ac8c39b0e673.__dont_treat_as_error__","label":"1➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"a5c283a7-982a-4786-8fc8-ac8c39b0e673.__action_status__","label":"1➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"a5c283a7-982a-4786-8fc8-ac8c39b0e673.Table","label":"1➛Incident Table","reference":"incident","reference_display":"Incident","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"a5c283a7-982a-4786-8fc8-ac8c39b0e673.Record","label":"1➛Incident Record","reference":"incident","reference_display":"Incident","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"Created or Updated_1.current.sys_created_by","label":"Trigger➛Hardware orders Record➛Created by","reference":"","reference_display":"Created by","type":"string","base_type":"string","parent_table_name":"x_742199_order_s_0_hardware_orders","column_name":"sys_created_by"},{"name":"Created or Updated_1.current.requested_by","label":"Trigger➛Hardware orders Record➛Requested by","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"x_742199_order_s_0_hardware_orders","column_name":"requested_by"},{"name":"Created or Updated_1.current.requested_by.first_name","label":"Trigger➛Hardware orders Record➛Requested by➛First name","reference":"","reference_display":"First name","type":"string","base_type":"string","parent_table_name":"sys_user","column_name":"first_name"}]&lt;/label_cache&gt;&lt;master&gt;true&lt;/master&gt;&lt;name&gt;Add new incident and log ordered item&lt;/name&gt;&lt;natlang/&gt;&lt;outputs/&gt;&lt;parent_flow display_value="Add new incident and log ordered item"&gt;fd6683b92fe04110f8c49dacf699b6f5&lt;/parent_flow&gt;&lt;remote_trigger_id/&gt;&lt;run_as&gt;user&lt;/run_as&gt;&lt;run_with_roles/&gt;&lt;sc_callable&gt;false&lt;/sc_callable&gt;&lt;status&gt;published&lt;/status&gt;&lt;sys_class_name&gt;sys_hub_flow_snapshot&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-12-21 17:20:51&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;0fb88b3d2fe04110f8c49dacf699b6be&lt;/sys_id&gt;&lt;sys_mod_count&gt;3&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_overrides/&gt;&lt;sys_package/&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Order server Hardware"&gt;1fe312e52f240110f8c49dacf699b61f&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-12-21 17:55:59&lt;/sys_updated_on&gt;&lt;type&gt;flow&lt;/type&gt;&lt;/sys_hub_flow_snapshot&gt;&lt;sys_translated_text action="delete_multiple" query="documentkey=0fb88b3d2fe04110f8c49dacf699b6be"/&gt;&lt;sys_variable_value action="delete_multiple" query="document_key=0fb88b3d2fe04110f8c49dacf699b6be"/&gt;&lt;sys_hub_trigger_instance action="delete_multiple" query="flow=0fb88b3d2fe04110f8c49dacf699b6be^sys_idNOT INabb8cb3d2fe04110f8c49dacf699b628"/&gt;&lt;sys_hub_trigger_instance action="INSERT_OR_UPDATE"&gt;&lt;comment/&gt;&lt;display_text/&gt;&lt;flow display_value="Add new incident and log ordered item"&gt;0fb88b3d2fe04110f8c49dacf699b6be&lt;/flow&gt;&lt;name&gt;Created or Updated&lt;/name&gt;&lt;remote_sys_id/&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-12-21 17:20:53&lt;/sys_created_on&gt;&lt;sys_id&gt;abb8cb3d2fe04110f8c49dacf699b628&lt;/sys_id&gt;&lt;sys_mod_count&gt;11&lt;/sys_mod_count&gt;&lt;sys_scope/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-12-21 17:56:02&lt;/sys_updated_on&gt;&lt;trigger_definition display_value="Created or Updated"&gt;a45d9180c32222002841b63b12d3aea7&lt;/trigger_definition&gt;&lt;trigger_inputs/&gt;&lt;trigger_outputs/&gt;&lt;trigger_type&gt;record_create_or_update&lt;/trigger_type&gt;&lt;/sys_hub_trigger_instance&gt;&lt;sys_variable_value action="delete_multiple" query="document_key=abb8cb3d2fe04110f8c49dacf699b628"/&gt;&lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;&lt;document&gt;sys_hub_trigger_instance&lt;/document&gt;&lt;document_key&gt;abb8cb3d2fe04110f8c49dacf699b628&lt;/document_key&gt;&lt;order&gt;1&lt;/order&gt;&lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-12-21 17:20:53&lt;/sys_created_on&gt;&lt;sys_id&gt;a3b8cb3d2fe04110f8c49dacf699b62a&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-12-21 17:20:53&lt;/sys_updated_on&gt;&lt;value&gt;x_742199_order_s_0_hardware_orders&lt;/value&gt;&lt;variable display_value="Table"&gt;cf1e1980c32222002841b63b12d3aea0&lt;/variable&gt;&lt;/sys_variable_value&gt;&lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;&lt;document&gt;sys_hub_trigger_instance&lt;/document&gt;&lt;document_key&gt;abb8cb3d2fe04110f8c49dacf699b628&lt;/document_key&gt;&lt;order&gt;100&lt;/order&gt;&lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-12-21 17:20:53&lt;/sys_created_on&gt;&lt;sys_id&gt;efb8cb3d2fe04110f8c49dacf699b629&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-12-21 17:20:53&lt;/sys_updated_on&gt;&lt;value&gt;^EQ&lt;/value&gt;&lt;variable display_value="Condition"&gt;707dd180c32222002841b63b12d3aecb&lt;/variable&gt;&lt;/sys_variable_value&gt;&lt;sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_trigger_output_a45d9180c32222002841b63b12d3aea7^id=abb8cb3d2fe04110f8c49dacf699b628"/&gt;&lt;sys_flow_cat_variable_model action="delete_multiple" query="id=0fb88b3d2fe04110f8c49dacf699b6be^sys_idNOT IN4bb88b3d2fe04110f8c49dacf699b6bf"/&gt;&lt;sys_flow_cat_variable_model action="INSERT_OR_UPDATE"&gt;&lt;id&gt;0fb88b3d2fe04110f8c49dacf699b6be&lt;/id&gt;&lt;name&gt;Trigger new Catalog item order&lt;/name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-12-21 17:20:51&lt;/sys_created_on&gt;&lt;sys_id&gt;4bb88b3d2fe04110f8c49dacf699b6bf&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_scope/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-12-21 17:20:51&lt;/sys_updated_on&gt;&lt;/sys_flow_cat_variable_model&gt;&lt;sys_hub_flow_input action="delete_multiple" query="model=0fb88b3d2fe04110f8c49dacf699b6be^sys_idNOT IN0fb88b3d2fe04110f8c49dacf699b6c2,13b88b3d2fe04110f8c49dacf699b6f5,5bb88b3d2fe04110f8c49dacf699b6ff"/&gt;&lt;sys_hub_flow_input action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;array&gt;false&lt;/array&gt;&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;&lt;attributes&gt;element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=document_id&lt;/attributes&gt;&lt;audit&gt;false&lt;/audit&gt;&lt;calculation&gt;&lt;![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]&gt;&lt;/calculation&gt;&lt;choice/&gt;&lt;choice_field/&gt;&lt;choice_table/&gt;&lt;column_label/&gt;&lt;comments/&gt;&lt;create_roles/&gt;&lt;default_value/&gt;&lt;defaultsort/&gt;&lt;delete_roles/&gt;&lt;dependent&gt;table_name&lt;/dependent&gt;&lt;dependent_on_field&gt;table_name&lt;/dependent_on_field&gt;&lt;display&gt;false&lt;/display&gt;&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;&lt;dynamic_creation_script/&gt;&lt;dynamic_default_value/&gt;&lt;dynamic_ref_qual/&gt;&lt;element&gt;current&lt;/element&gt;&lt;element_reference&gt;false&lt;/element_reference&gt;&lt;foreign_database/&gt;&lt;function_definition/&gt;&lt;function_field&gt;false&lt;/function_field&gt;&lt;help/&gt;&lt;hint/&gt;&lt;internal_type display_value=""&gt;document_id&lt;/internal_type&gt;&lt;label&gt;Record&lt;/label&gt;&lt;mandatory&gt;true&lt;/mandatory&gt;&lt;max_length&gt;200&lt;/max_length&gt;&lt;model display_value="Add new incident and log ordered item"&gt;0fb88b3d2fe04110f8c49dacf699b6be&lt;/model&gt;&lt;model_id&gt;0fb88b3d2fe04110f8c49dacf699b6be&lt;/model_id&gt;&lt;model_table&gt;sys_hub_flow_snapshot&lt;/model_table&gt;&lt;name&gt;var__m_sys_hub_flow_input_0fb88b3d2fe04110f8c49dacf699b6be&lt;/name&gt;&lt;next_element/&gt;&lt;order&gt;100&lt;/order&gt;&lt;primary&gt;false&lt;/primary&gt;&lt;read_only&gt;false&lt;/read_only&gt;&lt;read_roles/&gt;&lt;reference/&gt;&lt;reference_cascade_rule/&gt;&lt;reference_floats&gt;false&lt;/reference_floats&gt;&lt;reference_key/&gt;&lt;reference_qual/&gt;&lt;reference_qual_condition/&gt;&lt;reference_type/&gt;&lt;sizeclass/&gt;&lt;spell_check&gt;false&lt;/spell_check&gt;&lt;staged&gt;false&lt;/staged&gt;&lt;sys_class_name&gt;sys_hub_flow_input&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-12-21 17:20:51&lt;/sys_created_on&gt;&lt;sys_id&gt;0fb88b3d2fe04110f8c49dacf699b6c2&lt;/sys_id&gt;&lt;sys_mod_count&gt;5&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package/&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Order server Hardware"&gt;1fe312e52f240110f8c49dacf699b61f&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-12-21 17:55:58&lt;/sys_updated_on&gt;&lt;table_reference&gt;false&lt;/table_reference&gt;&lt;text_index&gt;false&lt;/text_index&gt;&lt;unique&gt;false&lt;/unique&gt;&lt;use_dependent_field&gt;true&lt;/use_dependent_field&gt;&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;&lt;virtual&gt;false&lt;/virtual&gt;&lt;widget/&gt;&lt;write_roles/&gt;&lt;xml_view&gt;false&lt;/xml_view&gt;&lt;/sys_hub_flow_input&gt;&lt;sys_hub_flow_input action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;array&gt;false&lt;/array&gt;&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;&lt;attributes&gt;child_label=FDChangeDetails,child_name=FDChangeDetails,child_type=object,child_type_label=Object,co_type_name=FDe1c0df35ef244110f9f81d3fe64ca841,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,pwd2droppable=true,uiType=array.object,uiTypeLabel=Array.Object&lt;/attributes&gt;&lt;audit&gt;false&lt;/audit&gt;&lt;calculation&gt;&lt;![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]&gt;&lt;/calculation&gt;&lt;choice/&gt;&lt;choice_field/&gt;&lt;choice_table/&gt;&lt;column_label/&gt;&lt;comments/&gt;&lt;create_roles/&gt;&lt;default_value/&gt;&lt;defaultsort/&gt;&lt;delete_roles/&gt;&lt;dependent/&gt;&lt;dependent_on_field/&gt;&lt;display&gt;false&lt;/display&gt;&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;&lt;dynamic_creation_script/&gt;&lt;dynamic_default_value/&gt;&lt;dynamic_ref_qual/&gt;&lt;element&gt;changed_fields&lt;/element&gt;&lt;element_reference&gt;false&lt;/element_reference&gt;&lt;foreign_database/&gt;&lt;function_definition/&gt;&lt;function_field&gt;false&lt;/function_field&gt;&lt;help/&gt;&lt;hint/&gt;&lt;internal_type display_value="String"&gt;string&lt;/internal_type&gt;&lt;label&gt;Changed Fields&lt;/label&gt;&lt;mandatory&gt;false&lt;/mandatory&gt;&lt;max_length&gt;4000&lt;/max_length&gt;&lt;model display_value="Add new incident and log ordered item"&gt;0fb88b3d2fe04110f8c49dacf699b6be&lt;/model&gt;&lt;model_id&gt;0fb88b3d2fe04110f8c49dacf699b6be&lt;/model_id&gt;&lt;model_table&gt;sys_hub_flow_snapshot&lt;/model_table&gt;&lt;name&gt;var__m_sys_hub_flow_input_0fb88b3d2fe04110f8c49dacf699b6be&lt;/name&gt;&lt;next_element/&gt;&lt;order&gt;100&lt;/order&gt;&lt;primary&gt;false&lt;/primary&gt;&lt;read_only&gt;false&lt;/read_only&gt;&lt;read_roles/&gt;&lt;reference/&gt;&lt;reference_cascade_rule/&gt;&lt;reference_floats&gt;false&lt;/reference_floats&gt;&lt;reference_key/&gt;&lt;reference_qual/&gt;&lt;reference_qual_condition/&gt;&lt;reference_type/&gt;&lt;sizeclass/&gt;&lt;spell_check&gt;false&lt;/spell_check&gt;&lt;staged&gt;false&lt;/staged&gt;&lt;sys_class_name&gt;sys_hub_flow_input&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-12-21 17:20:52&lt;/sys_created_on&gt;&lt;sys_id&gt;13b88b3d2fe04110f8c49dacf699b6f5&lt;/sys_id&gt;&lt;sys_mod_count&gt;3&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package/&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Order server Hardware"&gt;1fe312e52f240110f8c49dacf699b61f&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-12-21 17:55:58&lt;/sys_updated_on&gt;&lt;table_reference&gt;false&lt;/table_reference&gt;&lt;text_index&gt;false&lt;/text_index&gt;&lt;unique&gt;false&lt;/unique&gt;&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;&lt;virtual&gt;false&lt;/virtual&gt;&lt;widget/&gt;&lt;write_roles/&gt;&lt;xml_view&gt;false&lt;/xml_view&gt;&lt;/sys_hub_flow_input&gt;&lt;sys_hub_flow_input action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;array&gt;false&lt;/array&gt;&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;&lt;attributes&gt;element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name&lt;/attributes&gt;&lt;audit&gt;false&lt;/audit&gt;&lt;calculation&gt;&lt;![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]&gt;&lt;/calculation&gt;&lt;choice/&gt;&lt;choice_field/&gt;&lt;choice_table/&gt;&lt;column_label/&gt;&lt;comments/&gt;&lt;create_roles/&gt;&lt;default_value/&gt;&lt;defaultsort/&gt;&lt;delete_roles/&gt;&lt;dependent/&gt;&lt;dependent_on_field/&gt;&lt;display&gt;false&lt;/display&gt;&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;&lt;dynamic_creation_script/&gt;&lt;dynamic_default_value/&gt;&lt;dynamic_ref_qual/&gt;&lt;element&gt;table_name&lt;/element&gt;&lt;element_reference&gt;false&lt;/element_reference&gt;&lt;foreign_database/&gt;&lt;function_definition/&gt;&lt;function_field&gt;false&lt;/function_field&gt;&lt;help/&gt;&lt;hint/&gt;&lt;internal_type display_value=""&gt;table_name&lt;/internal_type&gt;&lt;label&gt;Table Name&lt;/label&gt;&lt;mandatory&gt;false&lt;/mandatory&gt;&lt;max_length&gt;200&lt;/max_length&gt;&lt;model display_value="Add new incident and log ordered item"&gt;0fb88b3d2fe04110f8c49dacf699b6be&lt;/model&gt;&lt;model_id&gt;0fb88b3d2fe04110f8c49dacf699b6be&lt;/model_id&gt;&lt;model_table&gt;sys_hub_flow_snapshot&lt;/model_table&gt;&lt;name&gt;var__m_sys_hub_flow_input_0fb88b3d2fe04110f8c49dacf699b6be&lt;/name&gt;&lt;next_element/&gt;&lt;order&gt;101&lt;/order&gt;&lt;primary&gt;false&lt;/primary&gt;&lt;read_only&gt;false&lt;/read_only&gt;&lt;read_roles/&gt;&lt;reference/&gt;&lt;reference_cascade_rule/&gt;&lt;reference_floats&gt;false&lt;/reference_floats&gt;&lt;reference_key/&gt;&lt;reference_qual/&gt;&lt;reference_qual_condition/&gt;&lt;reference_type/&gt;&lt;sizeclass/&gt;&lt;spell_check&gt;false&lt;/spell_check&gt;&lt;staged&gt;false&lt;/staged&gt;&lt;sys_class_name&gt;sys_hub_flow_input&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-12-21 17:20:52&lt;/sys_created_on&gt;&lt;sys_id&gt;5bb88b3d2fe04110f8c49dacf699b6ff&lt;/sys_id&gt;&lt;sys_mod_count&gt;5&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package/&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Order server Hardware"&gt;1fe312e52f240110f8c49dacf699b61f&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-12-21 17:55:58&lt;/sys_updated_on&gt;&lt;table_reference&gt;false&lt;/table_reference&gt;&lt;text_index&gt;false&lt;/text_index&gt;&lt;unique&gt;false&lt;/unique&gt;&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;&lt;virtual&gt;false&lt;/virtual&gt;&lt;widget/&gt;&lt;write_roles/&gt;&lt;xml_view&gt;false&lt;/xml_view&gt;&lt;/sys_hub_flow_input&gt;&lt;sys_hub_action_instance action="delete_multiple" query="flow=0fb88b3d2fe04110f8c49dacf699b6be^sys_idNOT IN5fb8cb3d2fe04110f8c49dacf699b618,abb8cb3d2fe04110f8c49dacf699b626,dbb8cb3d2fe04110f8c49dacf699b612"/&gt;&lt;sys_hub_action_instance action="INSERT_OR_UPDATE"&gt;&lt;action_inputs/&gt;&lt;action_inputs/&gt;&lt;action_type display_value="Log"&gt;5bc1bcc6531003003bf1d9109ec587d4&lt;/action_type&gt;&lt;action_type_parent display_value="Log"&gt;0e0ae8c2531003003bf1d9109ec587c8&lt;/action_type_parent&gt;&lt;comment/&gt;&lt;compiled_snapshot&gt;5bc1bcc6531003003bf1d9109ec587d4&lt;/compiled_snapshot&gt;&lt;display_text/&gt;&lt;flow display_value="Add new incident and log ordered item"&gt;0fb88b3d2fe04110f8c49dacf699b6be&lt;/flow&gt;&lt;order&gt;2&lt;/order&gt;&lt;parent_ui_id/&gt;&lt;sys_class_name&gt;sys_hub_action_instance&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-12-21 17:20:52&lt;/sys_created_on&gt;&lt;sys_id&gt;5fb8cb3d2fe04110f8c49dacf699b618&lt;/sys_id&gt;&lt;sys_mod_count&gt;14&lt;/sys_mod_count&gt;&lt;sys_scope display_value="Order server Hardware"&gt;1fe312e52f240110f8c49dacf699b61f&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-12-21 17:55:58&lt;/sys_updated_on&gt;&lt;ui_id&gt;591bb61c-47dc-49e3-9efc-e20ab68c0064&lt;/ui_id&gt;&lt;/sys_hub_action_instance&gt;&lt;sys_variable_value action="delete_multiple" query="document_key=5fb8cb3d2fe04110f8c49dacf699b618"/&gt;&lt;sys_element_mapping action="delete_multiple" query="id=5fb8cb3d2fe04110f8c49dacf699b618"/&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;log_message&lt;/field&gt;&lt;id&gt;5fb8cb3d2fe04110f8c49dacf699b618&lt;/id&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-12-21 17:20:52&lt;/sys_created_on&gt;&lt;sys_id&gt;1fb8cb3d2fe04110f8c49dacf699b619&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-12-21 17:20:52&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_action_input_5bc1bcc6531003003bf1d9109ec587d4&lt;/table&gt;&lt;value&gt;User {{Created or Updated_1.current.requested_by.name}} has ordered {{Created or Updated_1.current.hardware_type}} for server: {{Created or Updated_1.current.server.name}}&lt;/value&gt;&lt;/sys_element_mapping&gt;&lt;sys_hub_action_instance action="INSERT_OR_UPDATE"&gt;&lt;action_inputs/&gt;&lt;action_inputs/&gt;&lt;action_type display_value="Update Record"&gt;f9d01dd2c31332002841b63b12d3aea1&lt;/action_type&gt;&lt;action_type_parent display_value="Update Record"&gt;baf174c8c3c232002841b63b12d3aee4&lt;/action_type_parent&gt;&lt;comment/&gt;&lt;compiled_snapshot&gt;f9d01dd2c31332002841b63b12d3aea1&lt;/compiled_snapshot&gt;&lt;display_text/&gt;&lt;flow display_value="Add new incident and log ordered item"&gt;0fb88b3d2fe04110f8c49dacf699b6be&lt;/flow&gt;&lt;order&gt;3&lt;/order&gt;&lt;parent_ui_id/&gt;&lt;sys_class_name&gt;sys_hub_action_instance&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-12-21 17:20:53&lt;/sys_created_on&gt;&lt;sys_id&gt;abb8cb3d2fe04110f8c49dacf699b626&lt;/sys_id&gt;&lt;sys_mod_count&gt;14&lt;/sys_mod_count&gt;&lt;sys_scope display_value="Order server Hardware"&gt;1fe312e52f240110f8c49dacf699b61f&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-12-21 17:55:59&lt;/sys_updated_on&gt;&lt;ui_id&gt;65b7ba36-4e71-4952-8b08-0d500502d8bd&lt;/ui_id&gt;&lt;/sys_hub_action_instance&gt;&lt;sys_variable_value action="delete_multiple" query="document_key=abb8cb3d2fe04110f8c49dacf699b626"/&gt;&lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;&lt;document&gt;sys_hub_action_instance&lt;/document&gt;&lt;document_key&gt;abb8cb3d2fe04110f8c49dacf699b626&lt;/document_key&gt;&lt;order&gt;50&lt;/order&gt;&lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-12-21 17:20:53&lt;/sys_created_on&gt;&lt;sys_id&gt;a7b8cb3d2fe04110f8c49dacf699b628&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-12-21 17:20:53&lt;/sys_updated_on&gt;&lt;value&gt;incident&lt;/value&gt;&lt;variable display_value="Table"&gt;b5d01916c31332002841b63b12d3aec9&lt;/variable&gt;&lt;/sys_variable_value&gt;&lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;&lt;document&gt;sys_hub_action_instance&lt;/document&gt;&lt;document_key&gt;abb8cb3d2fe04110f8c49dacf699b626&lt;/document_key&gt;&lt;order&gt;100&lt;/order&gt;&lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-12-21 17:20:53&lt;/sys_created_on&gt;&lt;sys_id&gt;e3b8cb3d2fe04110f8c49dacf699b628&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-12-21 17:41:51&lt;/sys_updated_on&gt;&lt;value&gt;state=7^close_code=Solved (Permanently)^close_notes=Closed&lt;/value&gt;&lt;variable display_value="Fields"&gt;02d01916c31332002841b63b12d3aeee&lt;/variable&gt;&lt;/sys_variable_value&gt;&lt;sys_element_mapping action="delete_multiple" query="id=abb8cb3d2fe04110f8c49dacf699b626"/&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;record&lt;/field&gt;&lt;id&gt;abb8cb3d2fe04110f8c49dacf699b626&lt;/id&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-12-21 17:20:53&lt;/sys_created_on&gt;&lt;sys_id&gt;afb8cb3d2fe04110f8c49dacf699b627&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-12-21 17:41:51&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1&lt;/table&gt;&lt;value&gt;{{a5c283a7-982a-4786-8fc8-ac8c39b0e673.Record}}&lt;/value&gt;&lt;/sys_element_mapping&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;table_name&lt;/field&gt;&lt;id&gt;abb8cb3d2fe04110f8c49dacf699b626&lt;/id&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-12-21 17:20:53&lt;/sys_created_on&gt;&lt;sys_id&gt;ebb8cb3d2fe04110f8c49dacf699b627&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-12-21 17:20:53&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1&lt;/table&gt;&lt;value/&gt;&lt;/sys_element_mapping&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;values&lt;/field&gt;&lt;id&gt;abb8cb3d2fe04110f8c49dacf699b626&lt;/id&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-12-21 17:20:53&lt;/sys_created_on&gt;&lt;sys_id&gt;63b8cb3d2fe04110f8c49dacf699b628&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-12-21 17:20:53&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1&lt;/table&gt;&lt;value/&gt;&lt;/sys_element_mapping&gt;&lt;sys_hub_action_instance action="INSERT_OR_UPDATE"&gt;&lt;action_inputs/&gt;&lt;action_inputs/&gt;&lt;action_type display_value="Create Task"&gt;2b3a6335531003003bf1d9109ec58759&lt;/action_type&gt;&lt;action_type_parent display_value="Create Task"&gt;3f9b1ff1531003003bf1d9109ec58775&lt;/action_type_parent&gt;&lt;comment/&gt;&lt;compiled_snapshot&gt;2b3a6335531003003bf1d9109ec58759&lt;/compiled_snapshot&gt;&lt;display_text/&gt;&lt;flow display_value="Add new incident and log ordered item"&gt;0fb88b3d2fe04110f8c49dacf699b6be&lt;/flow&gt;&lt;order&gt;1&lt;/order&gt;&lt;parent_ui_id/&gt;&lt;sys_class_name&gt;sys_hub_action_instance&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-12-21 17:20:52&lt;/sys_created_on&gt;&lt;sys_id&gt;dbb8cb3d2fe04110f8c49dacf699b612&lt;/sys_id&gt;&lt;sys_mod_count&gt;14&lt;/sys_mod_count&gt;&lt;sys_scope display_value="Order server Hardware"&gt;1fe312e52f240110f8c49dacf699b61f&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-12-21 17:55:58&lt;/sys_updated_on&gt;&lt;ui_id&gt;a5c283a7-982a-4786-8fc8-ac8c39b0e673&lt;/ui_id&gt;&lt;/sys_hub_action_instance&gt;&lt;sys_variable_value action="delete_multiple" query="document_key=dbb8cb3d2fe04110f8c49dacf699b612"/&gt;&lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;&lt;document&gt;sys_hub_action_instance&lt;/document&gt;&lt;document_key&gt;dbb8cb3d2fe04110f8c49dacf699b612&lt;/document_key&gt;&lt;order&gt;0&lt;/order&gt;&lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-12-21 17:20:52&lt;/sys_created_on&gt;&lt;sys_id&gt;53b8cb3d2fe04110f8c49dacf699b614&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-12-21 17:20:52&lt;/sys_updated_on&gt;&lt;value&gt;incident&lt;/value&gt;&lt;variable display_value="Table"&gt;e73a6335531003003bf1d9109ec5875c&lt;/variable&gt;&lt;/sys_variable_value&gt;&lt;sys_element_mapping action="delete_multiple" query="id=dbb8cb3d2fe04110f8c49dacf699b612"/&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;field_values&lt;/field&gt;&lt;id&gt;dbb8cb3d2fe04110f8c49dacf699b612&lt;/id&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-12-21 17:20:52&lt;/sys_created_on&gt;&lt;sys_id&gt;dfb8cb3d2fe04110f8c49dacf699b613&lt;/sys_id&gt;&lt;sys_mod_count&gt;3&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-12-21 17:55:58&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_action_input_2b3a6335531003003bf1d9109ec58759&lt;/table&gt;&lt;value&gt;caller_id={{Created or Updated_1.current.sys_created_by}}^state=2^short_description=Ordered new server hardware^work_notes=User {{Created or Updated_1.current.requested_by.name}} has ordered {{Created or Updated_1.current.hardware_type}} for server: {{Created or Updated_1.current.server.name}}^category=hardware&lt;/value&gt;&lt;/sys_element_mapping&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;task_table&lt;/field&gt;&lt;id&gt;dbb8cb3d2fe04110f8c49dacf699b612&lt;/id&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-12-21 17:20:52&lt;/sys_created_on&gt;&lt;sys_id&gt;1fb8cb3d2fe04110f8c49dacf699b613&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-12-21 17:20:52&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_action_input_2b3a6335531003003bf1d9109ec58759&lt;/table&gt;&lt;value/&gt;&lt;/sys_element_mapping&gt;&lt;sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_input_0fb88b3d2fe04110f8c49dacf699b6be^sys_idNOT IN13b88b3d2fe04110f8c49dacf699b6f1,5bb88b3d2fe04110f8c49dacf699b6fb,9fb8cb3d2fe04110f8c49dacf699b605"/&gt;&lt;sys_documentation action="INSERT_OR_UPDATE"&gt;&lt;element&gt;current&lt;/element&gt;&lt;help/&gt;&lt;hint/&gt;&lt;label&gt;Record&lt;/label&gt;&lt;language&gt;en&lt;/language&gt;&lt;name&gt;var__m_sys_hub_flow_input_0fb88b3d2fe04110f8c49dacf699b6be&lt;/name&gt;&lt;plural/&gt;&lt;sys_class_name&gt;sys_documentation&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-12-21 17:20:52&lt;/sys_created_on&gt;&lt;sys_id&gt;13b88b3d2fe04110f8c49dacf699b6f1&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package display_value="Order server Hardware" source="x_742199_order_s_0"&gt;1fe312e52f240110f8c49dacf699b61f&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Order server Hardware"&gt;1fe312e52f240110f8c49dacf699b61f&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-12-21 17:20:52&lt;/sys_updated_on&gt;&lt;url/&gt;&lt;url_target/&gt;&lt;/sys_documentation&gt;&lt;sys_documentation action="INSERT_OR_UPDATE"&gt;&lt;element&gt;changed_fields&lt;/element&gt;&lt;help/&gt;&lt;hint/&gt;&lt;label&gt;Changed Fields&lt;/label&gt;&lt;language&gt;en&lt;/language&gt;&lt;name&gt;var__m_sys_hub_flow_input_0fb88b3d2fe04110f8c49dacf699b6be&lt;/name&gt;&lt;plural/&gt;&lt;sys_class_name&gt;sys_documentation&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-12-21 17:20:52&lt;/sys_created_on&gt;&lt;sys_id&gt;5bb88b3d2fe04110f8c49dacf699b6fb&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package display_value="Order server Hardware" source="x_742199_order_s_0"&gt;1fe312e52f240110f8c49dacf699b61f&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Order server Hardware"&gt;1fe312e52f240110f8c49dacf699b61f&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-12-21 17:20:52&lt;/sys_updated_on&gt;&lt;url/&gt;&lt;url_target/&gt;&lt;/sys_documentation&gt;&lt;sys_documentation action="INSERT_OR_UPDATE"&gt;&lt;element&gt;table_name&lt;/element&gt;&lt;help/&gt;&lt;hint/&gt;&lt;label&gt;Table Name&lt;/label&gt;&lt;language&gt;en&lt;/language&gt;&lt;name&gt;var__m_sys_hub_flow_input_0fb88b3d2fe04110f8c49dacf699b6be&lt;/name&gt;&lt;plural/&gt;&lt;sys_class_name&gt;sys_documentation&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-12-21 17:20:52&lt;/sys_created_on&gt;&lt;sys_id&gt;9fb8cb3d2fe04110f8c49dacf699b605&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package display_value="Order server Hardware" source="x_742199_order_s_0"&gt;1fe312e52f240110f8c49dacf699b61f&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Order server Hardware"&gt;1fe312e52f240110f8c49dacf699b61f&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-12-21 17:20:52&lt;/sys_updated_on&gt;&lt;url/&gt;&lt;url_target/&gt;&lt;/sys_documentation&gt;&lt;sys_hub_flow action="update"&gt;&lt;sys_id&gt;fd6683b92fe04110f8c49dacf699b6f5&lt;/sys_id&gt;&lt;latest_snapshot&gt;0fb88b3d2fe04110f8c49dacf699b6be&lt;/latest_snapshot&gt;&lt;/sys_hub_flow&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-550096966</payload_hash>
+        <record_name>Add new incident and log ordered item</record_name>
+        <reverted_from/>
+        <source>ccf312e52f240110f8c49dacf699b6c2</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-12-21 18:15:56</sys_created_on>
+        <sys_id>46551b792f244110f8c49dacf699b61a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>17dde3505b40000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-12-21 18:15:56</sys_updated_on>
+        <type>Flow</type>
+        <update_guid>8e551b7906244110029a58c58b4f3619</update_guid>
+        <update_guid_history>8e551b7906244110029a58c58b4f3619:-550096966,7093dbf5ba2441103e28867a18bd3baf:1728358417,41c2dfb54f244110c66b5508bddc6e11:-440151778,f6c013757c24411046f92d683092c237:-1671551382,c9c09f3558244110d93e24e91e14c9d3:402255349,d2b05f35ee2441103ed88145e17314e7:-273220491,abbf4ff1cb244110d342652f937f2b4b:-397407531,46bf0ff1d92441109c7b53edd1dde425:-451081178,5cbf8bf1bb244110b1f0536ef10e98fb:1824329290,503f83f17f24411099c12f4adba1b1ce:234209488,f62f83f18a2441102117f2bf27fb4811:-1157734183,338d8b717f244110cc10c560aa8bf84e:-30350994,128d0b71b624411072c0c08d1e739ad8:2028378861,0b2d8f31df2441100697716c17dae1b8:643482038,1bacc731b124411055193fb7febc7958:-1403897357,a5fa8fbd5fe041104af30c72cafbb1a2:618830633,698a0bbd2be0411070b7ca2d794fe028:-2123825967,9bb9cb7d28e04110bf12f4ab8498fcef:-1078928773,c2994b7d10e04110bdf333e690f626a5:1116160745,f7d88f3d40e0411085fd968d8f770a23:1721777906,18c8cb3d95e04110569ae8e73d8ddaae:-1974085951,f2b88b3dc6e0411095ca2353b8601f94:-946457905,b4b84b3dcae04110002969dbba5afb93:2067781411,7d6683b96ee041106de562492e0303fa:844567531</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-12-21 18:29:02</sys_created_on>
+        <sys_db_object display_value="" name="sys_hub_flow">sys_hub_flow</sys_db_object>
+        <sys_id>34a1711bea8c4e86921ddd608aef3844</sys_id>
+        <sys_metadata>fd6683b92fe04110f8c49dacf699b6f5</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Add new incident and log ordered item</sys_name>
+        <sys_package display_value="Order server Hardware" source="x_742199_order_s_0">1fe312e52f240110f8c49dacf699b61f</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Order server Hardware">1fe312e52f240110f8c49dacf699b61f</sys_scope>
+        <sys_scope_delete display_value="">1cffe78a544f4ad2bda3c91a6f7ee721</sys_scope_delete>
+        <sys_update_name>sys_hub_flow_fd6683b92fe04110f8c49dacf699b6f5</sys_update_name>
+        <sys_update_version display_value="sys_hub_flow_fd6683b92fe04110f8c49dacf699b6f5">46551b792f244110f8c49dacf699b61a</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-12-21 18:29:02</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_section caption="" section_id="726a12352f604110f8c49dacf699b6fd" sys_domain="global" table="x_742199_order_s_0_hardware_orders" version="3" view="">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.begin_split</element>
+            <position>0</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2021-12-21 13:58:29</sys_created_on>
+            <sys_id>726a52352f604110f8c49dacf699b603</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_742199_order_s_0_hardware_orders" sys_domain="global" view="Default view">726a12352f604110f8c49dacf699b6fd</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2021-12-21 13:58:29</sys_updated_on>
+            <sys_user/>
+            <type>.begin_split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>server</element>
+            <position>1</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2021-12-21 13:58:29</sys_created_on>
+            <sys_id>f26a16352f604110f8c49dacf699b651</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_742199_order_s_0_hardware_orders" sys_domain="global" view="Default view">726a12352f604110f8c49dacf699b6fd</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2021-12-21 13:58:29</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>hardware_type</element>
+            <position>2</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2021-12-21 13:58:29</sys_created_on>
+            <sys_id>7a6a16352f604110f8c49dacf699b651</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_742199_order_s_0_hardware_orders" sys_domain="global" view="Default view">726a12352f604110f8c49dacf699b6fd</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2021-12-21 13:58:29</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>hardware_capacity</element>
+            <position>3</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2021-12-21 13:58:29</sys_created_on>
+            <sys_id>fe6a16352f604110f8c49dacf699b651</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_742199_order_s_0_hardware_orders" sys_domain="global" view="Default view">726a12352f604110f8c49dacf699b6fd</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2021-12-21 13:58:29</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.split</element>
+            <position>4</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2021-12-21 13:58:29</sys_created_on>
+            <sys_id>766a16352f604110f8c49dacf699b652</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_742199_order_s_0_hardware_orders" sys_domain="global" view="Default view">726a12352f604110f8c49dacf699b6fd</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2021-12-21 13:58:29</sys_updated_on>
+            <sys_user/>
+            <type>.split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>requested_by</element>
+            <position>5</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2021-12-21 13:58:29</sys_created_on>
+            <sys_id>fa6a16352f604110f8c49dacf699b652</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_742199_order_s_0_hardware_orders" sys_domain="global" view="Default view">726a12352f604110f8c49dacf699b6fd</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2021-12-21 13:58:29</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>hardware_ram_specifications</element>
+            <position>6</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2021-12-21 13:58:29</sys_created_on>
+            <sys_id>726a16352f604110f8c49dacf699b653</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_742199_order_s_0_hardware_orders" sys_domain="global" view="Default view">726a12352f604110f8c49dacf699b6fd</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2021-12-21 13:58:29</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.end_split</element>
+            <position>7</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2021-12-21 13:58:29</sys_created_on>
+            <sys_id>f66a16352f604110f8c49dacf699b653</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_742199_order_s_0_hardware_orders" sys_domain="global" view="Default view">726a12352f604110f8c49dacf699b6fd</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2021-12-21 13:58:29</sys_updated_on>
+            <sys_user/>
+            <type>.end_split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>date_ordered</element>
+            <position>8</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2021-12-21 14:54:58</sys_created_on>
+            <sys_id>8657e2bd2f604110f8c49dacf699b6c3</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_742199_order_s_0_hardware_orders" sys_domain="global" view="Default view">726a12352f604110f8c49dacf699b6fd</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2021-12-21 14:54:58</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>state</element>
+            <position>9</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2021-12-21 16:49:44</sys_created_on>
+            <sys_id>df9147b52fe04110f8c49dacf699b6a3</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_742199_order_s_0_hardware_orders" sys_domain="global" view="Default view">726a12352f604110f8c49dacf699b6fd</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2021-12-21 16:49:44</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>work_notes</element>
+            <position>10</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2021-12-21 17:03:14</sys_created_on>
+            <sys_id>c1b44f392fe04110f8c49dacf699b6e7</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_742199_order_s_0_hardware_orders" sys_domain="global" view="Default view">726a12352f604110f8c49dacf699b6fd</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2021-12-21 17:03:14</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_section action="INSERT_OR_UPDATE">
+            <caption/>
+            <header>false</header>
+            <name>x_742199_order_s_0_hardware_orders</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2021-12-21 13:58:29</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>726a12352f604110f8c49dacf699b6fd</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_742199_order_s_0_hardware_orders</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Order server Hardware" source="x_742199_order_s_0">1fe312e52f240110f8c49dacf699b61f</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Order server Hardware">1fe312e52f240110f8c49dacf699b61f</sys_scope>
+            <sys_update_name>sys_ui_section_726a12352f604110f8c49dacf699b6fd</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2021-12-21 13:58:29</sys_updated_on>
+            <sys_user/>
+            <title>true</title>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+</record_update>

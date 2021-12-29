@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="RAM capacities" max_length="40" name="x_742199_order_s_0_ram_capacities" sizeclass="3" type="collection">
+        <element choice="3" display="true" label="Capacities" max_length="40" name="capacities" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="8gb" sequence="10" value="8gb"/>
+                <element inactive_on_update="false" label="16gb" sequence="20" value="16gb"/>
+                <element inactive_on_update="false" label="32gb" sequence="30" value="32gb"/>
+            </choice>
+        </element>
+    </element>
+</database>

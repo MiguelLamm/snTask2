@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="CPU threads" max_length="40" name="x_742199_order_s_0_cpu_threads" sizeclass="3" type="collection">
+        <element choice="3" display="true" label="Threads" max_length="40" name="threads" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="2" sequence="10" value="2"/>
+                <element inactive_on_update="false" label="4" sequence="20" value="4"/>
+                <element inactive_on_update="false" label="6" sequence="30" value="6"/>
+            </choice>
+        </element>
+    </element>
+</database>

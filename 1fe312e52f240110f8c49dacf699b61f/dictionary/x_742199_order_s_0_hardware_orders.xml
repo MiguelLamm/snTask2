@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Hardware orders" max_length="40" name="x_742199_order_s_0_hardware_orders" sizeclass="31" type="collection">
+        <element display="true" label="Date Ordered" max_length="40" name="date_ordered" type="glide_date"/>
+        <element label="Hardware CPU Specifications" max_length="32" name="hardware_capacity" reference="x_742199_order_s_0_cpu_threads" type="reference"/>
+        <element label="Hardware RAM Specifications" max_length="32" name="hardware_ram_specifications" reference="x_742199_order_s_0_ram_capacities" type="reference"/>
+        <element choice="3" label="Hardware Type" max_length="40" name="hardware_type" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="CPU" sequence="10" value="cpu"/>
+                <element inactive_on_update="false" label="RAM" sequence="20" value="ram"/>
+            </choice>
+        </element>
+        <element label="Requested by" max_length="32" name="requested_by" reference="sys_user" type="reference"/>
+        <element label="Server" max_length="32" name="server" reference="cmdb_ci_win_server" type="reference"/>
+        <element choice="3" label="State" max_length="40" name="state" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="In progress" sequence="10" value="in_progress"/>
+                <element inactive_on_update="false" label="Closed complete" sequence="20" value="closed_complete"/>
+            </choice>
+        </element>
+        <index name="index">
+            <element name="server"/>
+        </index>
+        <index name="index2">
+            <element name="hardware_ram_specifications"/>
+        </index>
+        <index name="index3">
+            <element name="requested_by"/>
+        </index>
+    </element>
+</database>
