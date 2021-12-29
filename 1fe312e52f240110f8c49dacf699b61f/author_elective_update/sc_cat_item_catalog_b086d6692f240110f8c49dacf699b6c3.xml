@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sc_cat_item_catalog">
+    <sc_cat_item_catalog action="DELETE">
+        <sc_cat_item display_value="Order Hardware">c64456e52f240110f8c49dacf699b6a2</sc_cat_item>
+        <sc_catalog display_value="Service Catalog">e0d08b13c3330100c8b837659bba8fb4</sc_catalog>
+        <sys_class_name>sc_cat_item_catalog</sys_class_name>
+        <sys_created_by>aes.creator</sys_created_by>
+        <sys_created_on>2021-12-20 19:02:56</sys_created_on>
+        <sys_id>b086d6692f240110f8c49dacf699b6c3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Service Catalog.Order Hardware</sys_name>
+        <sys_package display_value="Order server Hardware" source="x_742199_order_s_0">1fe312e52f240110f8c49dacf699b61f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Order server Hardware">1fe312e52f240110f8c49dacf699b61f</sys_scope>
+        <sys_update_name>sc_cat_item_catalog_b086d6692f240110f8c49dacf699b6c3</sys_update_name>
+        <sys_updated_by>aes.creator</sys_updated_by>
+        <sys_updated_on>2021-12-20 19:02:56</sys_updated_on>
+    </sc_cat_item_catalog>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Order server Hardware">1fe312e52f240110f8c49dacf699b61f</application>
+        <file_path/>
+        <instance_id>2197ce74dbe6db80439ef70fbf96195e</instance_id>
+        <instance_name>dev60592</instance_name>
+        <name>sc_cat_item_catalog_b086d6692f240110f8c49dacf699b6c3</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sc_cat_item_catalog"><sc_cat_item_catalog action="INSERT_OR_UPDATE"><sc_cat_item display_value="Order Hardware">c64456e52f240110f8c49dacf699b6a2</sc_cat_item><sc_catalog display_value="Service Catalog">e0d08b13c3330100c8b837659bba8fb4</sc_catalog><sys_class_name>sc_cat_item_catalog</sys_class_name><sys_created_by>aes.creator</sys_created_by><sys_created_on>2021-12-20 19:02:56</sys_created_on><sys_id>b086d6692f240110f8c49dacf699b6c3</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Service Catalog.Order Hardware</sys_name><sys_package display_value="Order server Hardware" source="x_742199_order_s_0">1fe312e52f240110f8c49dacf699b61f</sys_package><sys_policy/><sys_scope display_value="Order server Hardware">1fe312e52f240110f8c49dacf699b61f</sys_scope><sys_update_name>sc_cat_item_catalog_b086d6692f240110f8c49dacf699b6c3</sys_update_name><sys_updated_by>aes.creator</sys_updated_by><sys_updated_on>2021-12-20 19:02:56</sys_updated_on></sc_cat_item_catalog></record_update>]]></payload>
+        <payload_hash>-990981680</payload_hash>
+        <record_name>Service Catalog.Order Hardware</record_name>
+        <reverted_from/>
+        <source>ccf312e52f240110f8c49dacf699b6c2</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>aes.creator</sys_created_by>
+        <sys_created_on>2021-12-20 19:02:56</sys_created_on>
+        <sys_id>f886d6692f240110f8c49dacf699b6c8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>17dd939b19e0000001</sys_recorded_at>
+        <sys_updated_by>aes.creator</sys_updated_by>
+        <sys_updated_on>2021-12-20 19:02:56</sys_updated_on>
+        <type>Catalog Items Catalog</type>
+        <update_guid>7086d6695f240110e7c73eb5e84b16c8</update_guid>
+        <update_guid_history>7086d6695f240110e7c73eb5e84b16c8:-990981680</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Service Catalog.Order Hardware">068352bd2f204110f8c49dacf699b676</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-12-21 13:28:25</sys_created_on>
+        <sys_db_object display_value="" name="sc_cat_item_catalog">sc_cat_item_catalog</sys_db_object>
+        <sys_id>1b18f2e2719a4522b8a2f98eca229184</sys_id>
+        <sys_metadata>b086d6692f240110f8c49dacf699b6c3</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Service Catalog.Order Hardware</sys_name>
+        <sys_package display_value="Order server Hardware" source="x_742199_order_s_0">1fe312e52f240110f8c49dacf699b61f</sys_package>
+        <sys_parent display_value="">c64456e52f240110f8c49dacf699b6a2</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Order server Hardware">1fe312e52f240110f8c49dacf699b61f</sys_scope>
+        <sys_scope_delete display_value="">1cffe78a544f4ad2bda3c91a6f7ee721</sys_scope_delete>
+        <sys_update_name>sc_cat_item_catalog_b086d6692f240110f8c49dacf699b6c3</sys_update_name>
+        <sys_update_version display_value="sc_cat_item_catalog_b086d6692f240110f8c49dacf699b6c3">f886d6692f240110f8c49dacf699b6c8</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-12-21 13:28:25</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

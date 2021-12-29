@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow">
+    <sys_hub_flow action="DELETE">
+        <access>public</access>
+        <acls/>
+        <active>false</active>
+        <annotation/>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <compiler_build/>
+        <copied_from>9a41b6c2ff12101088e94ee9453bf1a4</copied_from>
+        <copied_from_name>FlowTemplate_Empty</copied_from_name>
+        <description>Sets empty Hardware specification in the order to Not specified</description>
+        <internal_name>set_empty_hardware_specification_to_not_specified</internal_name>
+        <label_cache>[]</label_cache>
+        <latest_snapshot/>
+        <master_snapshot/>
+        <name>Set empty Hardware specification to Not specified</name>
+        <natlang/>
+        <outputs/>
+        <remote_trigger_id/>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <show_draft_actions>false</show_draft_actions>
+        <show_triggered_flows>false</show_triggered_flows>
+        <status>draft</status>
+        <sys_class_name>sys_hub_flow</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-12-21 14:35:47</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>09f26eb92f604110f8c49dacf699b66e</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Set empty Hardware specification to Not specified</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Order server Hardware" source="x_742199_order_s_0">1fe312e52f240110f8c49dacf699b61f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Order server Hardware">1fe312e52f240110f8c49dacf699b61f</sys_scope>
+        <sys_update_name>sys_hub_flow_09f26eb92f604110f8c49dacf699b66e</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-12-21 14:35:47</sys_updated_on>
+        <type>flow</type>
+    </sys_hub_flow>
+    <sys_translated_text action="DELETE" query="documentkey=09f26eb92f604110f8c49dacf699b66e"/>
+    <sys_variable_value action="DELETE" query="document_key=09f26eb92f604110f8c49dacf699b66e"/>
+    <sys_flow_cat_variable_model action="DELETE" query="id=09f26eb92f604110f8c49dacf699b66e^sys_idNOT INcdf26eb92f604110f8c49dacf699b66f"/>
+    <sys_flow_cat_variable_model action="DELETE">
+        <id>09f26eb92f604110f8c49dacf699b66e</id>
+        <name>Set empty Hardware specification to Not specified</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-12-21 14:35:47</sys_created_on>
+        <sys_id>cdf26eb92f604110f8c49dacf699b66f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-12-21 14:35:47</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Order server Hardware">1fe312e52f240110f8c49dacf699b61f</application>
+        <file_path/>
+        <instance_id>2197ce74dbe6db80439ef70fbf96195e</instance_id>
+        <instance_name>dev60592</instance_name>
+        <name>sys_hub_flow_09f26eb92f604110f8c49dacf699b66e</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow"><sys_hub_flow action="INSERT_OR_UPDATE"><access>public</access><acls/><active>false</active><annotation/><callable_by_client_api>false</callable_by_client_api><category/><compiler_build/><copied_from>9a41b6c2ff12101088e94ee9453bf1a4</copied_from><copied_from_name>FlowTemplate_Empty</copied_from_name><description>Sets empty Hardware specification in the order to Not specified</description><internal_name>set_empty_hardware_specification_to_not_specified</internal_name><label_cache>[]</label_cache><latest_snapshot/><master_snapshot/><name>Set empty Hardware specification to Not specified</name><natlang/><outputs/><remote_trigger_id/><run_as>user</run_as><run_with_roles/><sc_callable>false</sc_callable><show_draft_actions>false</show_draft_actions><show_triggered_flows>false</show_triggered_flows><status>draft</status><sys_class_name>sys_hub_flow</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2021-12-21 14:35:47</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>09f26eb92f604110f8c49dacf699b66e</sys_id><sys_mod_count>2</sys_mod_count><sys_name>Set empty Hardware specification to Not specified</sys_name><sys_overrides/><sys_package display_value="Order server Hardware" source="x_742199_order_s_0">1fe312e52f240110f8c49dacf699b61f</sys_package><sys_policy/><sys_scope display_value="Order server Hardware">1fe312e52f240110f8c49dacf699b61f</sys_scope><sys_update_name>sys_hub_flow_09f26eb92f604110f8c49dacf699b66e</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2021-12-21 14:35:47</sys_updated_on><type>flow</type></sys_hub_flow><sys_translated_text action="delete_multiple" query="documentkey=09f26eb92f604110f8c49dacf699b66e"/><sys_variable_value action="delete_multiple" query="document_key=09f26eb92f604110f8c49dacf699b66e"/><sys_flow_cat_variable_model action="delete_multiple" query="id=09f26eb92f604110f8c49dacf699b66e^sys_idNOT INcdf26eb92f604110f8c49dacf699b66f"/><sys_flow_cat_variable_model action="INSERT_OR_UPDATE"><id>09f26eb92f604110f8c49dacf699b66e</id><name>Set empty Hardware specification to Not specified</name><sys_created_by>admin</sys_created_by><sys_created_on>2021-12-21 14:35:47</sys_created_on><sys_id>cdf26eb92f604110f8c49dacf699b66f</sys_id><sys_mod_count>0</sys_mod_count><sys_scope/><sys_updated_by>admin</sys_updated_by><sys_updated_on>2021-12-21 14:35:47</sys_updated_on></sys_flow_cat_variable_model></record_update>]]></payload>
+        <payload_hash>514707528</payload_hash>
+        <record_name>Set empty Hardware specification to Not specified</record_name>
+        <reverted_from/>
+        <source>ccf312e52f240110f8c49dacf699b6c2</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-12-21 14:35:47</sys_created_on>
+        <sys_id>15f26eb92f604110f8c49dacf699b691</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>17ddd6b792b0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-12-21 14:35:47</sys_updated_on>
+        <type>Flow</type>
+        <update_guid>5df26eb9be60411067a5098d2eb40a90</update_guid>
+        <update_guid_history>5df26eb9be60411067a5098d2eb40a90:514707528,81f26eb916604110fb7f0d71800a0073:724431191</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-12-21 14:39:19</sys_created_on>
+        <sys_db_object display_value="" name="sys_hub_flow">sys_hub_flow</sys_db_object>
+        <sys_id>81b38b4fa24f4503bac5ebc26b5b9f51</sys_id>
+        <sys_metadata>09f26eb92f604110f8c49dacf699b66e</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Set empty Hardware specification to Not specified</sys_name>
+        <sys_package display_value="Order server Hardware" source="x_742199_order_s_0">1fe312e52f240110f8c49dacf699b61f</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Order server Hardware">1fe312e52f240110f8c49dacf699b61f</sys_scope>
+        <sys_scope_delete display_value="">1cffe78a544f4ad2bda3c91a6f7ee721</sys_scope_delete>
+        <sys_update_name>sys_hub_flow_09f26eb92f604110f8c49dacf699b66e</sys_update_name>
+        <sys_update_version display_value="sys_hub_flow_09f26eb92f604110f8c49dacf699b66e">15f26eb92f604110f8c49dacf699b691</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-12-21 14:39:19</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

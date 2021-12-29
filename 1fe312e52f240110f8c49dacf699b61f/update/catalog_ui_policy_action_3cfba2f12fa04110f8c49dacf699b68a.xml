@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="catalog_ui_policy_action">
+    <catalog_ui_policy_action action="INSERT_OR_UPDATE">
+        <catalog_item display_value="Order server hardware">95b316bd2f204110f8c49dacf699b617</catalog_item>
+        <catalog_variable>IO:78db22f12fa04110f8c49dacf699b686</catalog_variable>
+        <cleared>false</cleared>
+        <disabled>ignore</disabled>
+        <field/>
+        <mandatory>ignore</mandatory>
+        <order>100</order>
+        <sys_class_name>catalog_ui_policy_action</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-12-21 15:15:05</sys_created_on>
+        <sys_id>3cfba2f12fa04110f8c49dacf699b68a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>date_ordered</sys_name>
+        <sys_package display_value="Order server Hardware" source="x_742199_order_s_0">1fe312e52f240110f8c49dacf699b61f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Order server Hardware">1fe312e52f240110f8c49dacf699b61f</sys_scope>
+        <sys_update_name>catalog_ui_policy_action_3cfba2f12fa04110f8c49dacf699b68a</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-12-21 15:15:05</sys_updated_on>
+        <table/>
+        <ui_policy display_value="Always make 'date_ordered' hidden ">feeba2f12fa04110f8c49dacf699b60b</ui_policy>
+        <variable>date_ordered</variable>
+        <variable_set/>
+        <visible>false</visible>
+    </catalog_ui_policy_action>
+</record_update>

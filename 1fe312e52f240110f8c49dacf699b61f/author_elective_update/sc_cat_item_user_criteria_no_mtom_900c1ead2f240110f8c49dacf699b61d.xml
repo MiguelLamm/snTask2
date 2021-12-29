@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sc_cat_item_user_criteria_no_mtom">
+    <sc_cat_item_user_criteria_no_mtom action="DELETE">
+        <sc_cat_item display_value="Order Hardware">c64456e52f240110f8c49dacf699b6a2</sc_cat_item>
+        <sys_class_name>sc_cat_item_user_criteria_no_mtom</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-12-20 19:38:59</sys_created_on>
+        <sys_id>900c1ead2f240110f8c49dacf699b61d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Order Hardware.Users with 'cmdb_read' Role</sys_name>
+        <sys_package display_value="Order server Hardware" source="x_742199_order_s_0">1fe312e52f240110f8c49dacf699b61f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Order server Hardware">1fe312e52f240110f8c49dacf699b61f</sys_scope>
+        <sys_update_name>sc_cat_item_user_criteria_no_mtom_900c1ead2f240110f8c49dacf699b61d</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-12-20 19:38:59</sys_updated_on>
+        <user_criteria display_value="Users with 'cmdb_read' Role">e9a3e55c7361230039517a5454f6a7c7</user_criteria>
+    </sc_cat_item_user_criteria_no_mtom>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Order server Hardware">1fe312e52f240110f8c49dacf699b61f</application>
+        <file_path/>
+        <instance_id>2197ce74dbe6db80439ef70fbf96195e</instance_id>
+        <instance_name>dev60592</instance_name>
+        <name>sc_cat_item_user_criteria_no_mtom_900c1ead2f240110f8c49dacf699b61d</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sc_cat_item_user_criteria_no_mtom"><sc_cat_item_user_criteria_no_mtom action="INSERT_OR_UPDATE"><sc_cat_item display_value="Order Hardware">c64456e52f240110f8c49dacf699b6a2</sc_cat_item><sys_class_name>sc_cat_item_user_criteria_no_mtom</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2021-12-20 19:38:59</sys_created_on><sys_id>900c1ead2f240110f8c49dacf699b61d</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Order Hardware.Users with 'cmdb_read' Role</sys_name><sys_package display_value="Order server Hardware" source="x_742199_order_s_0">1fe312e52f240110f8c49dacf699b61f</sys_package><sys_policy/><sys_scope display_value="Order server Hardware">1fe312e52f240110f8c49dacf699b61f</sys_scope><sys_update_name>sc_cat_item_user_criteria_no_mtom_900c1ead2f240110f8c49dacf699b61d</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2021-12-20 19:38:59</sys_updated_on><user_criteria display_value="Users with 'cmdb_read' Role">e9a3e55c7361230039517a5454f6a7c7</user_criteria></sc_cat_item_user_criteria_no_mtom></record_update>]]></payload>
+        <payload_hash>-1634712822</payload_hash>
+        <record_name>Order Hardware.Users with 'cmdb_read' Role</record_name>
+        <reverted_from/>
+        <source>ccf312e52f240110f8c49dacf699b6c2</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-12-20 19:38:59</sys_created_on>
+        <sys_id>7cce5a612f640110f8c49dacf699b614</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>17dd95ab1070000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-12-20 19:38:59</sys_updated_on>
+        <type>Catalog Item Not Available for</type>
+        <update_guid>f0ce5a61e0640110c3bdc4bd7ebab614</update_guid>
+        <update_guid_history>f0ce5a61e0640110c3bdc4bd7ebab614:-1634712822,f80e1e21f5640110e9e8203b787a454e:-1067903082,900c1ead0e240110cdd9c83d84ee991f:-1634712822</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Order Hardware.Users with 'cmdb_read' Role">e05f52a12f640110f8c49dacf699b6e3</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-12-20 19:41:26</sys_created_on>
+        <sys_db_object display_value="" name="sc_cat_item_user_criteria_no_mtom">sc_cat_item_user_criteria_no_mtom</sys_db_object>
+        <sys_id>599b179fce7c49669fe2585c413b1c39</sys_id>
+        <sys_metadata>900c1ead2f240110f8c49dacf699b61d</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Order Hardware.Users with 'cmdb_read' Role</sys_name>
+        <sys_package display_value="Order server Hardware" source="x_742199_order_s_0">1fe312e52f240110f8c49dacf699b61f</sys_package>
+        <sys_parent display_value="">c64456e52f240110f8c49dacf699b6a2</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Order server Hardware">1fe312e52f240110f8c49dacf699b61f</sys_scope>
+        <sys_scope_delete display_value="">1cffe78a544f4ad2bda3c91a6f7ee721</sys_scope_delete>
+        <sys_update_name>sc_cat_item_user_criteria_no_mtom_900c1ead2f240110f8c49dacf699b61d</sys_update_name>
+        <sys_update_version display_value="sc_cat_item_user_criteria_no_mtom_900c1ead2f240110f8c49dacf699b61d">7cce5a612f640110f8c49dacf699b614</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-12-20 19:41:26</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
